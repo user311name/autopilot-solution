@@ -1,17 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* =========================================
-       MENU MOBILE
-    ========================================= */
+    // =========================================
+    // MENU MOBILE
+    // =========================================
 
     const menuBtn = document.querySelector(".menu-btn");
     const navLinks = document.querySelector(".nav-links");
 
     if (menuBtn && navLinks) {
 
-        menuBtn.addEventListener("click", function (event) {
-
-            event.stopPropagation();
+        menuBtn.addEventListener("click", function () {
 
             const isOpen = navLinks.classList.toggle("open");
 
@@ -26,12 +24,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 "aria-label",
                 isOpen ? "Fermer le menu" : "Ouvrir le menu"
             );
+
         });
 
 
-        /* Fermer le menu après avoir cliqué sur un lien */
+        // Fermer le menu lorsqu'on clique sur un lien
+        const links = navLinks.querySelectorAll("a");
 
-        navLinks.querySelectorAll("a").forEach(function (link) {
+        links.forEach(function (link) {
 
             link.addEventListener("click", function () {
 
@@ -48,19 +48,25 @@ document.addEventListener("DOMContentLoaded", function () {
                     "aria-label",
                     "Ouvrir le menu"
                 );
+
             });
 
         });
 
 
-        /* Fermer si on clique en dehors du menu */
-
+        // Fermer le menu si on clique en dehors
         document.addEventListener("click", function (event) {
 
+            const clickedInsideMenu =
+                navLinks.contains(event.target);
+
+            const clickedButton =
+                menuBtn.contains(event.target);
+
             if (
-                navLinks.classList.contains("open") &&
-                !navLinks.contains(event.target) &&
-                !menuBtn.contains(event.target)
+                !clickedInsideMenu &&
+                !clickedButton &&
+                navLinks.classList.contains("open")
             ) {
 
                 navLinks.classList.remove("open");
@@ -72,34 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     "false"
                 );
 
-                menuBtn.setAttribute(
-                    "aria-label",
-                    "Ouvrir le menu"
-                );
-            }
-
-        });
-
-
-        /* Fermer avec la touche Échap */
-
-        document.addEventListener("keydown", function (event) {
-
-            if (event.key === "Escape") {
-
-                navLinks.classList.remove("open");
-
-                menuBtn.textContent = "☰";
-
-                menuBtn.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                menuBtn.setAttribute(
-                    "aria-label",
-                    "Ouvrir le menu"
-                );
             }
 
         });
@@ -107,9 +85,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =========================================
-       RETOUR EN HAUT
-    ========================================= */
+    // =========================================
+    // RETOUR EN HAUT
+    // =========================================
 
     const topBtn = document.querySelector(".top");
 
@@ -138,9 +116,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =========================================
-       FORMULAIRE
-    ========================================= */
+    // =========================================
+    // FORMULAIRE
+    // =========================================
 
     const form = document.querySelector("#contact-form");
     const message = document.querySelector("#form-message");
@@ -157,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     "Merci ! Votre demande a bien été préparée. Nous reviendrons vers vous rapidement.";
 
                 message.style.color = "#9b78ff";
+
             }
 
             form.reset();
@@ -166,31 +145,38 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* =========================================
-       LIENS AVEC DATA-SCROLL
-    ========================================= */
+    // =========================================
+    // LIENS AVEC DATA-SCROLL
+    // =========================================
 
-    document
-        .querySelectorAll("[data-scroll]")
-        .forEach(function (button) {
+    const scrollButtons =
+        document.querySelectorAll("[data-scroll]");
 
-            button.addEventListener("click", function () {
+    scrollButtons.forEach(function (button) {
 
-                const selector = button.dataset.scroll;
+        button.addEventListener("click", function () {
 
-                const target = document.querySelector(selector);
+            const selector =
+                button.getAttribute("data-scroll");
 
-                if (target) {
+            if (!selector) {
+                return;
+            }
 
-                    target.scrollIntoView({
-                        behavior: "smooth",
-                        block: "start"
-                    });
+            const target =
+                document.querySelector(selector);
 
-                }
+            if (target) {
 
-            });
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
 
         });
+
+    });
 
 });
