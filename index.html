@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
 
@@ -8,95 +9,91 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>
-        AutoPilot Solutions | Automatisation des tâches pour entreprises
-    </title>
+    <title>AutoPilot Solutions | Automatisez votre entreprise</title>
 
     <meta
         name="description"
-        content="AutoPilot Solutions aide les entreprises, TPE, PME, indépendants, artisans et professionnels de services à automatiser leurs tâches répétitives, administratives et commerciales."
+        content="AutoPilot Solutions conçoit des automatisations adaptées aux entreprises pour simplifier les tâches répétitives et optimiser les processus."
     >
 
     <meta
-        name="keywords"
-        content="automatisation entreprise, automatisation TPE PME, automatisation des tâches, automatisation administrative, automatisation commerciale, automatisation des processus"
+        name="robots"
+        content="index, follow"
     >
-
-    <meta name="robots" content="index, follow">
 
     <link
-        rel="canonical"
-        href="https://www.autopilotsolutions.fr/"
+        rel="stylesheet"
+        href="css/style.css"
     >
-
-    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="home-page">
 
-<header class="header">
+<header class="site-header">
 
-    <div class="container nav">
+    <div class="container navbar">
 
-        <a href="index.html" class="logo" aria-label="AutoPilot Solutions - Accueil">
-
-            <div class="logo-mark" aria-hidden="true">
-                ◯⌁
-            </div>
-
-            <div class="logo-text">
-                AUTOPILOT
-                <span>SOLUTIONS</span>
-            </div>
-
+        <a
+            href="index.html"
+            class="logo"
+            aria-label="AutoPilot Solutions - Accueil"
+        >
+            <img
+                src="images/logo.png"
+                alt="AutoPilot Solutions"
+            >
         </a>
 
-        <nav
-            class="nav-links"
-            id="main-navigation"
-            aria-label="Navigation principale"
+        <button
+            class="menu-toggle"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+            type="button"
         >
+            ☰
+        </button>
 
-            <a href="index.html" class="active">
+        <nav class="nav-links">
+
+            <a
+                class="active"
+                href="index.html"
+            >
                 Accueil
-            </a>
-
-            <a href="pages/services.html">
-                Services
             </a>
 
             <a href="pages/pour-qui.html">
                 Pour qui ?
             </a>
 
+            <a href="pages/services.html">
+                Services
+            </a>
+
             <a href="pages/pourquoi-nous.html">
                 Pourquoi nous ?
+            </a>
+
+            <a href="pages/comment-ca-marche.html">
+                Comment ça marche
             </a>
 
             <a href="pages/tarifs.html">
                 Tarifs
             </a>
 
+            <a href="pages/faq.html">
+                FAQ
+            </a>
+
             <a
-                href="pages/contact.html"
-                class="btn btn-primary nav-cta"
-                data-conversion="quote-click"
+                class="nav-cta"
+                href="pages/devis.html"
             >
                 Demander un devis
             </a>
 
         </nav>
-
-        <button
-            class="menu-btn"
-            id="menu-button"
-            type="button"
-            aria-label="Ouvrir le menu"
-            aria-expanded="false"
-            aria-controls="main-navigation"
-        >
-            ☰
-        </button>
 
     </div>
 
@@ -105,1360 +102,932 @@
 
 <main>
 
-<!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================== -->
 
-<section class="hero">
+    <section class="home-hero">
 
-    <div class="container hero-grid">
+        <div class="home-hero-grid"></div>
 
-        <div class="hero-content">
+        <div class="home-orb home-orb-1"></div>
+        <div class="home-orb home-orb-2"></div>
+        <div class="home-orb home-orb-3"></div>
 
-            <div class="eyebrow">
-                AUTOMATISATION • PERFORMANCE • SIMPLICITÉ
+        <div class="container home-hero-inner">
+
+            <div class="home-hero-content">
+
+                <div class="home-eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    AUTOMATISATION INTELLIGENTE
+                </div>
+
+                <h1>
+
+                    Automatisez ce qui vous fait
+
+                    <span class="home-gradient">
+                        perdre du temps.
+                    </span>
+
+                </h1>
+
+                <p class="home-hero-text">
+
+                    AutoPilot Solutions transforme vos tâches répétitives
+                    en processus automatisés, simples et adaptés à votre
+                    façon de travailler.
+
+                </p>
+
+                <div class="home-hero-buttons">
+
+                    <a
+                        href="pages/devis.html"
+                        class="home-btn home-btn-primary"
+                    >
+                        <span>Parler de mon projet</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+
+                    <a
+                        href="pages/services.html"
+                        class="home-btn home-btn-secondary"
+                    >
+                        Découvrir les services
+                    </a>
+
+                </div>
+
+                <div class="home-trust">
+
+                    <div class="trust-item">
+                        <span class="trust-icon">✦</span>
+                        <span>Solutions sur mesure</span>
+                    </div>
+
+                    <div class="trust-item">
+                        <span class="trust-icon">✓</span>
+                        <span>Processus simplifiés</span>
+                    </div>
+
+                    <div class="trust-item">
+                        <span class="trust-icon">∞</span>
+                        <span>Automatisation évolutive</span>
+                    </div>
+
+                </div>
+
             </div>
 
-            <h1>
-                AUTOMATISEZ VOS
-                <span class="gradient">
-                    TÂCHES RÉPÉTITIVES.
-                </span>
-            </h1>
 
-            <p class="hero-lead">
-                AutoPilot Solutions aide les TPE, PME, indépendants,
-                artisans et entreprises de services à automatiser les
-                tâches administratives et commerciales qui leur font
-                perdre du temps.
-            </p>
+            <!-- VISUEL 3D -->
 
-            <p class="hero-subtext">
-                Emails, relances, demandes clients, rendez-vous,
-                documents, reporting et processus sur mesure.
-            </p>
+            <div class="home-hero-visual">
 
-            <div class="hero-actions">
+                <div class="hero-visual-glow"></div>
 
-                <a
-                    href="pages/contact.html"
-                    class="btn btn-primary"
-                    data-conversion="quote-click"
-                >
-                    Demander un devis →
-                </a>
+                <div class="hero-dashboard">
+
+                    <div class="dashboard-top">
+
+                        <div class="dashboard-brand">
+
+                            <div class="mini-logo">
+                                AP
+                            </div>
+
+                            <div>
+                                <strong>
+                                    AutoPilot
+                                </strong>
+
+                                <span>
+                                    Automation Hub
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <div class="dashboard-status">
+                            <span></span>
+                            Système actif
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-main">
+
+                        <div class="dashboard-heading">
+
+                            <div>
+                                <span class="dashboard-label">
+                                    VUE D'ENSEMBLE
+                                </span>
+
+                                <h3>
+                                    Vos processus
+                                </h3>
+                            </div>
+
+                            <div class="dashboard-menu">
+                                •••
+                            </div>
+
+                        </div>
+
+
+                        <div class="dashboard-stats">
+
+                            <div class="dash-stat">
+
+                                <span>
+                                    Processus
+                                </span>
+
+                                <strong>
+                                    Automatisés
+                                </strong>
+
+                                <div class="stat-line">
+                                    <i></i>
+                                </div>
+
+                            </div>
+
+                            <div class="dash-stat">
+
+                                <span>
+                                    Activité
+                                </span>
+
+                                <strong>
+                                    En cours
+                                </strong>
+
+                                <div class="activity-pulse">
+                                    <b></b>
+                                    <b></b>
+                                    <b></b>
+                                    <b></b>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- WORKFLOW -->
+
+                        <div class="dashboard-workflow">
+
+                            <div class="flow-title">
+                                Workflow automatique
+                            </div>
+
+                            <div class="flow-path">
+
+                                <div class="flow-card">
+
+                                    <div class="flow-card-icon">
+                                        ✉
+                                    </div>
+
+                                    <div>
+                                        <strong>
+                                            Nouvelle demande
+                                        </strong>
+
+                                        <span>
+                                            Formulaire reçu
+                                        </span>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="flow-line">
+                                    <span></span>
+                                </div>
+
+
+                                <div class="flow-card">
+
+                                    <div class="flow-card-icon purple">
+                                        ⚙
+                                    </div>
+
+                                    <div>
+                                        <strong>
+                                            Traitement
+                                        </strong>
+
+                                        <span>
+                                            Action automatique
+                                        </span>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="flow-line">
+                                    <span></span>
+                                </div>
+
+
+                                <div class="flow-card">
+
+                                    <div class="flow-card-icon orange">
+                                        ✓
+                                    </div>
+
+                                    <div>
+                                        <strong>
+                                            Équipe informée
+                                        </strong>
+
+                                        <span>
+                                            Notification envoyée
+                                        </span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CARTES FLOTTANTES -->
+
+                <div class="home-floating-card floating-one">
+
+                    <span class="floating-icon">
+                        ⚡
+                    </span>
+
+                    <div>
+                        <strong>
+                            Automatisation
+                        </strong>
+
+                        <span>
+                            Processus actif
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="home-floating-card floating-two">
+
+                    <span class="floating-icon purple-icon">
+                        AI
+                    </span>
+
+                    <div>
+                        <strong>
+                            Workflow intelligent
+                        </strong>
+
+                        <span>
+                            Exécution automatique
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="home-floating-card floating-three">
+
+                    <span class="floating-check">
+                        ✓
+                    </span>
+
+                    <div>
+                        <strong>
+                            Action terminée
+                        </strong>
+
+                        <span>
+                            Tout fonctionne
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hero-scroll">
+            <span></span>
+            Découvrir
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         INTRO
+    ========================== -->
+
+    <section class="home-intro section">
+
+        <div class="container">
+
+            <div class="home-section-heading">
+
+                <div class="home-section-kicker">
+                    LE PRINCIPE
+                </div>
+
+                <h2>
+                    Votre entreprise avance.
+                    <span>
+                        Les tâches répétitives, elles, peuvent attendre.
+                    </span>
+                </h2>
+
+                <p>
+                    L'objectif n'est pas d'ajouter de la complexité.
+                    Il est de faire travailler vos outils ensemble afin
+                    que certaines actions se réalisent automatiquement.
+                </p>
+
+            </div>
+
+
+            <div class="home-benefits-grid">
+
+                <article class="home-benefit-card">
+
+                    <div class="benefit-number">
+                        01
+                    </div>
+
+                    <div class="benefit-icon-box">
+                        <span>↗</span>
+                    </div>
+
+                    <h3>
+                        Moins de manuel
+                    </h3>
+
+                    <p>
+                        Réduisez les actions répétitives et les manipulations
+                        qui reviennent chaque jour.
+                    </p>
+
+                    <div class="benefit-bottom">
+                        Simplifier
+                        <span>→</span>
+                    </div>
+
+                </article>
+
+
+                <article class="home-benefit-card benefit-highlight">
+
+                    <div class="benefit-number">
+                        02
+                    </div>
+
+                    <div class="benefit-icon-box">
+                        <span>◷</span>
+                    </div>
+
+                    <h3>
+                        Plus de temps
+                    </h3>
+
+                    <p>
+                        Consacrez davantage de temps à vos clients,
+                        vos projets et les missions qui nécessitent
+                        réellement votre attention.
+                    </p>
+
+                    <div class="benefit-bottom">
+                        Optimiser
+                        <span>→</span>
+                    </div>
+
+                </article>
+
+
+                <article class="home-benefit-card">
+
+                    <div class="benefit-number">
+                        03
+                    </div>
+
+                    <div class="benefit-icon-box">
+                        <span>⌁</span>
+                    </div>
+
+                    <h3>
+                        Une organisation plus fluide
+                    </h3>
+
+                    <p>
+                        Structurez vos processus pour que les bonnes actions
+                        se déclenchent au bon moment.
+                    </p>
+
+                    <div class="benefit-bottom">
+                        Structurer
+                        <span>→</span>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WORKFLOW
+    ========================== -->
+
+    <section class="home-workflow-section section">
+
+        <div class="workflow-bg-orb"></div>
+
+        <div class="container">
+
+            <div class="home-workflow-heading">
+
+                <div>
+
+                    <div class="home-section-kicker">
+                        UN EXEMPLE CONCRET
+                    </div>
+
+                    <h2>
+                        Imaginez vos tâches
+                        <span>qui s'enchaînent seules.</span>
+                    </h2>
+
+                </div>
+
+                <p>
+                    Un workflow peut connecter plusieurs étapes de votre
+                    activité pour éviter les actions manuelles inutiles.
+                </p>
+
+            </div>
+
+
+            <div class="home-flow-visual">
+
+                <div class="flow-visual-line"></div>
+
+
+                <article class="home-flow-node node-one">
+
+                    <div class="node-top">
+
+                        <span class="node-number">
+                            01
+                        </span>
+
+                        <span class="node-icon">
+                            ✉
+                        </span>
+
+                    </div>
+
+                    <span class="node-label">
+                        DÉCLENCHEUR
+                    </span>
+
+                    <h3>
+                        Demande reçue
+                    </h3>
+
+                    <p>
+                        Un prospect remplit votre formulaire.
+                    </p>
+
+                </article>
+
+
+                <div class="flow-connector connector-one">
+                    <span></span>
+                </div>
+
+
+                <article class="home-flow-node node-two">
+
+                    <div class="node-top">
+
+                        <span class="node-number">
+                            02
+                        </span>
+
+                        <span class="node-icon purple">
+                            ⚙
+                        </span>
+
+                    </div>
+
+                    <span class="node-label">
+                        AUTOMATISATION
+                    </span>
+
+                    <h3>
+                        Informations traitées
+                    </h3>
+
+                    <p>
+                        Les données sont automatiquement organisées.
+                    </p>
+
+                </article>
+
+
+                <div class="flow-connector connector-two">
+                    <span></span>
+                </div>
+
+
+                <article class="home-flow-node node-three">
+
+                    <div class="node-top">
+
+                        <span class="node-number">
+                            03
+                        </span>
+
+                        <span class="node-icon orange">
+                            ↗
+                        </span>
+
+                    </div>
+
+                    <span class="node-label">
+                        ACTION
+                    </span>
+
+                    <h3>
+                        Équipe informée
+                    </h3>
+
+                    <p>
+                        Une notification est envoyée automatiquement.
+                    </p>
+
+                </article>
+
+
+                <div class="flow-connector connector-three">
+                    <span></span>
+                </div>
+
+
+                <article class="home-flow-node node-four">
+
+                    <div class="node-top">
+
+                        <span class="node-number">
+                            04
+                        </span>
+
+                        <span class="node-icon green">
+                            ✓
+                        </span>
+
+                    </div>
+
+                    <span class="node-label">
+                        SUIVI
+                    </span>
+
+                    <h3>
+                        Relance programmée
+                    </h3>
+
+                    <p>
+                        Une nouvelle action peut être déclenchée ensuite.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES PREVIEW
+    ========================== -->
+
+    <section class="home-services section">
+
+        <div class="container">
+
+            <div class="home-services-top">
+
+                <div>
+
+                    <div class="home-section-kicker">
+                        CE QUE NOUS AUTOMATISONS
+                    </div>
+
+                    <h2>
+                        Des automatisations
+                        <span>pensées pour votre activité.</span>
+                    </h2>
+
+                </div>
 
                 <a
                     href="pages/services.html"
-                    class="btn btn-secondary"
+                    class="home-text-link"
                 >
-                    Voir ce que nous pouvons automatiser
+                    Voir tous les services
+                    <span>→</span>
                 </a>
 
             </div>
 
-            <div class="trust-line">
 
-                <span>✓ Solutions sur mesure</span>
-                <span>✓ Adaptées à vos outils</span>
-                <span>✓ Accompagnement personnalisé</span>
+            <div class="home-service-grid">
 
-            </div>
+                <a
+                    href="pages/services.html"
+                    class="home-service-card"
+                >
 
-        </div>
-
-
-        <div class="hero-card" aria-label="Exemple de workflow automatisé">
-
-            <div class="hero-card-inner">
-
-                <div class="dashboard-title">
-                    AUTOPILOT WORKFLOW
-                </div>
-
-                <div class="workflow-large">
-
-                    <div class="workflow-step">
-                        <span class="workflow-icon">📩</span>
-                        <strong>Demande</strong>
-                        <small>
-                            Un prospect remplit un formulaire
-                        </small>
+                    <div class="service-card-icon">
+                        ✉
                     </div>
 
-                    <div class="workflow-arrow">
-                        →
+                    <div class="service-card-content">
+
+                        <span>
+                            01
+                        </span>
+
+                        <h3>
+                            Emails automatisés
+                        </h3>
+
+                        <p>
+                            Déclenchez les bons messages au bon moment.
+                        </p>
+
                     </div>
 
-                    <div class="workflow-step">
-                        <span class="workflow-icon">⚡</span>
-                        <strong>Automatisation</strong>
-                        <small>
-                            Les informations sont traitées
-                        </small>
+                    <div class="service-card-arrow">
+                        ↗
                     </div>
 
-                    <div class="workflow-arrow">
-                        →
+                </a>
+
+
+                <a
+                    href="pages/services.html"
+                    class="home-service-card"
+                >
+
+                    <div class="service-card-icon">
+                        ↻
                     </div>
 
-                    <div class="workflow-step">
-                        <span class="workflow-icon">✉</span>
-                        <strong>Réponse</strong>
-                        <small>
-                            Un email peut être envoyé automatiquement
-                        </small>
+                    <div class="service-card-content">
+
+                        <span>
+                            02
+                        </span>
+
+                        <h3>
+                            Relances automatiques
+                        </h3>
+
+                        <p>
+                            Programmez certaines relances sans y penser.
+                        </p>
+
                     </div>
 
-                </div>
+                    <div class="service-card-arrow">
+                        ↗
+                    </div>
 
-                <div class="workflow-result">
-                    ✓ Équipe informée • Suivi organisé • Relance programmée
-                </div>
+                </a>
+
+
+                <a
+                    href="pages/services.html"
+                    class="home-service-card"
+                >
+
+                    <div class="service-card-icon">
+                        ◈
+                    </div>
+
+                    <div class="service-card-content">
+
+                        <span>
+                            03
+                        </span>
+
+                        <h3>
+                            Gestion des informations
+                        </h3>
+
+                        <p>
+                            Faites circuler vos données entre vos outils.
+                        </p>
+
+                    </div>
+
+                    <div class="service-card-arrow">
+                        ↗
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="pages/services.html"
+                    class="home-service-card"
+                >
+
+                    <div class="service-card-icon">
+                        ⚡
+                    </div>
+
+                    <div class="service-card-content">
+
+                        <span>
+                            04
+                        </span>
+
+                        <h3>
+                            Automatisations sur mesure
+                        </h3>
+
+                        <p>
+                            Construisez un workflow adapté à votre besoin.
+                        </p>
+
+                    </div>
+
+                    <div class="service-card-arrow">
+                        ↗
+                    </div>
+
+                </a>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
 
+    <!-- =========================
+         CTA
+    ========================== -->
 
-<!-- POSITIONNEMENT -->
+    <section class="home-final-cta section">
 
-<section class="section-light">
+        <div class="container">
 
-    <div class="container">
+            <div class="home-cta-box">
 
-        <div class="section-head">
+                <div class="cta-orb cta-orb-one"></div>
+                <div class="cta-orb cta-orb-two"></div>
 
-            <div class="eyebrow">
-                POURQUOI AUTOMATISER ?
-            </div>
+                <div class="cta-grid"></div>
 
-            <h2>
-                VOTRE TEMPS DOIT SERVIR
-                <span class="gradient">
-                    À CRÉER DE LA VALEUR.
-                </span>
-            </h2>
+                <div class="home-cta-content">
 
-            <p>
-                Certaines tâches sont nécessaires mais répétitives.
-                Elles peuvent mobiliser votre équipe alors qu'une partie
-                du processus peut être simplifiée ou automatisée.
-            </p>
+                    <span class="cta-kicker">
+                        PRÊT À SIMPLIFIER VOTRE QUOTIDIEN ?
+                    </span>
 
-        </div>
-
-
-        <div class="before-after">
-
-            <article class="panel before">
-
-                <div class="panel-label">
-                    AVANT
-                </div>
-
-                <h3>
-                    Trop d'actions manuelles
-                </h3>
-
-                <ul>
-                    <li>📩 Traiter les mêmes emails</li>
-                    <li>🔄 Relancer manuellement les prospects</li>
-                    <li>📅 Organiser les rendez-vous</li>
-                    <li>📄 Reprendre les mêmes informations</li>
-                    <li>📊 Préparer les reportings</li>
-                    <li>⚠️ Risquer les oublis</li>
-                </ul>
-
-            </article>
-
-
-            <div class="center-arrow" aria-hidden="true">
-                →
-            </div>
-
-
-            <article class="panel after">
-
-                <div class="panel-label">
-                    APRÈS
-                </div>
-
-                <h3>
-                    Un processus mieux organisé
-                </h3>
-
-                <ul>
-                    <li>📩 Emails traités plus simplement</li>
-                    <li>🔄 Relances programmées</li>
-                    <li>📅 Rendez-vous mieux organisés</li>
-                    <li>📄 Informations centralisées</li>
-                    <li>📊 Reporting simplifié</li>
-                    <li>✓ Moins d'oublis</li>
-                </ul>
-
-            </article>
-
-        </div>
-
-
-        <div class="section-cta">
-
-            <a
-                href="pages/contact.html"
-                class="btn btn-primary"
-                data-conversion="quote-click"
-            >
-                Parler de mon projet →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- POUR QUI -->
-
-<section>
-
-    <div class="container">
-
-        <div class="section-head">
-
-            <div class="eyebrow">
-                POUR QUI ?
-            </div>
-
-            <h2>
-                DES SOLUTIONS POUR LES
-                <span class="gradient">
-                    ENTREPRISES QUI VEULENT GAGNER DU TEMPS.
-                </span>
-            </h2>
-
-            <p>
-                AutoPilot Solutions s'adresse notamment aux structures
-                qui réalisent régulièrement des tâches administratives,
-                commerciales ou de suivi répétitives.
-            </p>
-
-        </div>
-
-
-        <div class="cards audience-cards">
-
-            <article class="card">
-
-                <div class="icon">🏢</div>
-
-                <h3>
-                    TPE & PME
-                </h3>
-
-                <p>
-                    Simplifiez les processus répétitifs sans alourdir
-                    votre organisation.
-                </p>
-
-            </article>
-
-
-            <article class="card">
-
-                <div class="icon">👤</div>
-
-                <h3>
-                    Indépendants
-                </h3>
-
-                <p>
-                    Réduisez le temps consacré aux tâches administratives
-                    et concentrez-vous sur votre activité.
-                </p>
-
-            </article>
-
-
-            <article class="card">
-
-                <div class="icon">🛠</div>
-
-                <h3>
-                    Artisans
-                </h3>
-
-                <p>
-                    Automatisez certaines demandes, relances,
-                    rendez-vous et tâches de suivi.
-                </p>
-
-            </article>
-
-
-            <article class="card">
-
-                <div class="icon">🛍</div>
-
-                <h3>
-                    Commerçants
-                </h3>
-
-                <p>
-                    Organisez mieux les demandes clients et les
-                    processus de suivi.
-                </p>
-
-            </article>
-
-
-            <article class="card">
-
-                <div class="icon">💼</div>
-
-                <h3>
-                    Entreprises de services
-                </h3>
-
-                <p>
-                    Fluidifiez les demandes, rendez-vous,
-                    relances et échanges avec vos clients.
-                </p>
-
-            </article>
-
-
-            <article class="card">
-
-                <div class="icon">⚙</div>
-
-                <h3>
-                    Autres activités
-                </h3>
-
-                <p>
-                    Si une tâche est répétitive, nous pouvons étudier
-                    si elle peut être automatisée.
-                </p>
-
-            </article>
-
-        </div>
-
-
-        <div class="section-cta">
-
-            <a
-                href="pages/pour-qui.html"
-                class="btn btn-secondary"
-            >
-                Voir si votre activité est concernée →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- SERVICES -->
-
-<section class="section-dark">
-
-    <div class="container">
-
-        <div class="section-head">
-
-            <div class="eyebrow">
-                NOS SERVICES
-            </div>
-
-            <h2>
-                CE QUE NOUS POUVONS
-                <span class="gradient">
-                    AUTOMATISER.
-                </span>
-            </h2>
-
-            <p>
-                Chaque automatisation est pensée autour de votre
-                fonctionnement, de vos outils et de votre besoin réel.
-            </p>
-
-        </div>
-
-
-        <div class="cards service-cards">
-
-            <article class="card service-card">
-
-                <div class="icon">✉</div>
-
-                <h3>
-                    Emails
-                </h3>
-
-                <p class="problem">
-                    <strong>Problème :</strong>
-                    certaines demandes nécessitent toujours les mêmes actions.
-                </p>
-
-                <p>
-                    <strong>Solution :</strong>
-                    automatiser certaines étapes de tri, traitement,
-                    réponse ou suivi.
-                </p>
-
-                <p class="benefit">
-                    <strong>Bénéfice :</strong>
-                    moins d'actions répétitives.
-                </p>
-
-                <a
-                    href="pages/contact.html"
-                    class="text-link"
-                    data-conversion="quote-click"
-                >
-                    Demander un devis →
-                </a>
-
-            </article>
-
-
-            <article class="card service-card">
-
-                <div class="icon">↻</div>
-
-                <h3>
-                    Relances clients
-                </h3>
-
-                <p>
-                    Programmez certaines relances afin de limiter
-                    les oublis et d'améliorer le suivi des prospects
-                    et clients.
-                </p>
-
-                <p class="benefit">
-                    <strong>Bénéfice :</strong>
-                    un suivi plus régulier.
-                </p>
-
-                <a
-                    href="pages/contact.html"
-                    class="text-link"
-                    data-conversion="quote-click"
-                >
-                    Demander un devis →
-                </a>
-
-            </article>
-
-
-            <article class="card service-card">
-
-                <div class="icon">📅</div>
-
-                <h3>
-                    Rendez-vous
-                </h3>
-
-                <p>
-                    Simplifiez certaines étapes liées à la prise,
-                    confirmation ou organisation des rendez-vous.
-                </p>
-
-                <p class="benefit">
-                    <strong>Bénéfice :</strong>
-                    moins d'échanges inutiles.
-                </p>
-
-                <a
-                    href="pages/contact.html"
-                    class="text-link"
-                    data-conversion="quote-click"
-                >
-                    Demander un devis →
-                </a>
-
-            </article>
-
-
-            <article class="card service-card">
-
-                <div class="icon">📋</div>
-
-                <h3>
-                    Gestion des demandes
-                </h3>
-
-                <p>
-                    Centralisez les informations reçues et automatisez
-                    certaines étapes de traitement.
-                </p>
-
-                <p class="benefit">
-                    <strong>Bénéfice :</strong>
-                    une meilleure organisation.
-                </p>
-
-                <a
-                    href="pages/contact.html"
-                    class="text-link"
-                    data-conversion="quote-click"
-                >
-                    Demander un devis →
-                </a>
-
-            </article>
-
-
-            <article class="card service-card">
-
-                <div class="icon">📄</div>
-
-                <h3>
-                    Documents
-                </h3>
-
-                <p>
-                    Automatisez certaines étapes de création,
-                    transmission ou classement d'informations et
-                    documents.
-                </p>
-
-                <p class="benefit">
-                    <strong>Bénéfice :</strong>
-                    moins de saisie manuelle.
-                </p>
-
-                <a
-                    href="pages/contact.html"
-                    class="text-link"
-                    data-conversion="quote-click"
-                >
-                    Demander un devis →
-                </a>
-
-            </article>
-
-
-            <article class="card service-card">
-
-                <div class="icon">📊</div>
-
-                <h3>
-                    Reporting
-                </h3>
-
-                <p>
-                    Simplifiez la collecte et la présentation
-                    d'informations utiles à votre activité.
-                </p>
-
-                <p class="benefit">
-                    <strong>Bénéfice :</strong>
-                    des informations plus faciles à suivre.
-                </p>
-
-                <a
-                    href="pages/contact.html"
-                    class="text-link"
-                    data-conversion="quote-click"
-                >
-                    Demander un devis →
-                </a>
-
-            </article>
-
-
-            <article class="card service-card">
-
-                <div class="icon">⚙</div>
-
-                <h3>
-                    Automatisation sur mesure
-                </h3>
-
-                <p>
-                    Nous étudions votre processus et construisons
-                    une solution adaptée à votre fonctionnement.
-                </p>
-
-                <p class="benefit">
-                    <strong>Bénéfice :</strong>
-                    une solution conçue autour de votre besoin.
-                </p>
-
-                <a
-                    href="pages/contact.html"
-                    class="text-link"
-                    data-conversion="quote-click"
-                >
-                    Parler du projet →
-                </a>
-
-            </article>
-
-        </div>
-
-
-        <div class="section-cta">
-
-            <a
-                href="pages/services.html"
-                class="btn btn-primary"
-            >
-                Découvrir tous les services →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- WORKFLOW -->
-
-<section>
-
-    <div class="container">
-
-        <div class="section-head">
-
-            <div class="eyebrow">
-                CAS CONCRET
-            </div>
-
-            <h2>
-                UNE AUTOMATISATION,
-                <span class="gradient">
-                    CONCRÈTEMENT.
-                </span>
-            </h2>
-
-            <p>
-                Voici un exemple de processus pouvant être automatisé.
-                La solution réelle dépend de vos outils et de votre fonctionnement.
-            </p>
-
-        </div>
-
-
-        <div class="workflow-timeline">
-
-            <article class="timeline-item">
-
-                <span class="timeline-number">01</span>
-
-                <div>
-                    <h3>
-                        Le prospect remplit un formulaire
-                    </h3>
+                    <h2>
+                        Et si votre entreprise
+                        <span>travaillait un peu moins manuellement ?</span>
+                    </h2>
 
                     <p>
-                        Les informations nécessaires sont récupérées.
+                        Décrivez-nous simplement votre fonctionnement actuel.
+                        Nous identifierons ensemble les tâches qui peuvent
+                        être automatisées.
                     </p>
+
+                    <a
+                        href="pages/devis.html"
+                        class="home-btn home-btn-primary"
+                    >
+                        <span>Décrire mon projet</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+
                 </div>
 
-            </article>
-
-
-            <div class="timeline-arrow">
-                ↓
-            </div>
-
-
-            <article class="timeline-item">
-
-                <span class="timeline-number">02</span>
-
-                <div>
-                    <h3>
-                        Les informations sont enregistrées
-                    </h3>
-
-                    <p>
-                        Les données peuvent être transmises à l'outil
-                        prévu pour leur traitement.
-                    </p>
-                </div>
-
-            </article>
-
-
-            <div class="timeline-arrow">
-                ↓
-            </div>
-
-
-            <article class="timeline-item">
-
-                <span class="timeline-number">03</span>
-
-                <div>
-                    <h3>
-                        Un email peut être envoyé
-                    </h3>
-
-                    <p>
-                        Une confirmation ou une réponse peut être
-                        déclenchée automatiquement.
-                    </p>
-                </div>
-
-            </article>
-
-
-            <div class="timeline-arrow">
-                ↓
-            </div>
-
-
-            <article class="timeline-item">
-
-                <span class="timeline-number">04</span>
-
-                <div>
-                    <h3>
-                        L'équipe est informée
-                    </h3>
-
-                    <p>
-                        Une notification peut être envoyée à la personne
-                        concernée.
-                    </p>
-                </div>
-
-            </article>
-
-
-            <div class="timeline-arrow">
-                ↓
-            </div>
-
-
-            <article class="timeline-item">
-
-                <span class="timeline-number">05</span>
-
-                <div>
-                    <h3>
-                        Une relance peut être programmée
-                    </h3>
-
-                    <p>
-                        Le suivi peut continuer automatiquement selon
-                        les règles définies.
-                    </p>
-                </div>
-
-            </article>
-
-        </div>
-
-
-        <div class="section-cta">
-
-            <a
-                href="pages/contact.html"
-                class="btn btn-primary"
-                data-conversion="quote-click"
-            >
-                Créer mon automatisation →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- BENEFICES -->
-
-<section class="section-dark">
-
-    <div class="container">
-
-        <div class="section-head">
-
-            <div class="eyebrow">
-                RÉSULTATS
-            </div>
-
-            <h2>
-                CE QUE VOUS CHERCHEZ,
-                <span class="gradient">
-                    C'EST DU TEMPS.
-                </span>
-            </h2>
-
-        </div>
-
-
-        <div class="benefit-grid">
-
-            <article class="benefit">
-                <span>⏱</span>
-                <h3>Gain de temps</h3>
-                <p>
-                    Réduisez le temps consacré à certaines tâches répétitives.
-                </p>
-            </article>
-
-            <article class="benefit">
-                <span>📋</span>
-                <h3>Meilleure organisation</h3>
-                <p>
-                    Structurez davantage certains processus du quotidien.
-                </p>
-            </article>
-
-            <article class="benefit">
-                <span>🔄</span>
-                <h3>Moins de tâches manuelles</h3>
-                <p>
-                    Automatisez les étapes qui n'ont pas besoin d'être réalisées manuellement.
-                </p>
-            </article>
-
-            <article class="benefit">
-                <span>✓</span>
-                <h3>Moins d'oublis</h3>
-                <p>
-                    Programmez certains suivis et certaines actions récurrentes.
-                </p>
-            </article>
-
-            <article class="benefit">
-                <span>⚡</span>
-                <h3>Meilleure réactivité</h3>
-                <p>
-                    Certaines actions peuvent être déclenchées sans intervention immédiate.
-                </p>
-            </article>
-
-            <article class="benefit">
-                <span>👥</span>
-                <h3>Meilleur suivi</h3>
-                <p>
-                    Facilitez le suivi des prospects, clients et demandes.
-                </p>
-            </article>
-
-            <article class="benefit">
-                <span>🎯</span>
-                <h3>Plus de valeur</h3>
-                <p>
-                    Libérez du temps pour les tâches qui nécessitent réellement votre attention.
-                </p>
-            </article>
-
-        </div>
-
-
-        <div class="section-cta">
-
-            <a
-                href="pages/contact.html"
-                class="btn btn-primary"
-                data-conversion="quote-click"
-            >
-                Voir ce qui peut être automatisé →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- POURQUOI NOUS -->
-
-<section>
-
-    <div class="container">
-
-        <div class="section-head">
-
-            <div class="eyebrow">
-                POURQUOI AUTOPILOT ?
-            </div>
-
-            <h2>
-                UNE AUTOMATISATION PENSÉE
-                <span class="gradient">
-                    POUR VOTRE ENTREPRISE.
-                </span>
-            </h2>
-
-        </div>
-
-
-        <div class="reassurance-grid">
-
-            <article class="reassurance">
-                <span>01</span>
-                <h3>Solutions sur mesure</h3>
-                <p>
-                    Nous partons de votre besoin plutôt que d'imposer
-                    une solution standard.
-                </p>
-            </article>
-
-            <article class="reassurance">
-                <span>02</span>
-                <h3>Accompagnement personnalisé</h3>
-                <p>
-                    L'objectif est de comprendre votre fonctionnement
-                    avant de définir l'automatisation.
-                </p>
-            </article>
-
-            <article class="reassurance">
-                <span>03</span>
-                <h3>Adaptation à vos outils</h3>
-                <p>
-                    La solution peut être étudiée en fonction des outils
-                    que vous utilisez déjà.
-                </p>
-            </article>
-
-            <article class="reassurance">
-                <span>04</span>
-                <h3>Réduction des tâches répétitives</h3>
-                <p>
-                    Nous cherchons à simplifier les actions qui reviennent
-                    régulièrement.
-                </p>
-            </article>
-
-            <article class="reassurance">
-                <span>05</span>
-                <h3>Mise en place</h3>
-                <p>
-                    Une fois la solution définie, les étapes nécessaires
-                    à sa mise en place sont organisées.
-                </p>
-            </article>
-
-            <article class="reassurance">
-                <span>06</span>
-                <h3>Suivi et amélioration</h3>
-                <p>
-                    Une automatisation peut être ajustée lorsque vos
-                    besoins ou votre fonctionnement évoluent.
-                </p>
-            </article>
-
-        </div>
-
-
-        <div class="section-cta">
-
-            <a
-                href="pages/pourquoi-nous.html"
-                class="btn btn-secondary"
-            >
-                Pourquoi nous choisir ? →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- COMMENT ÇA FONCTIONNE -->
-
-<section class="section-dark">
-
-    <div class="container">
-
-        <div class="section-head">
-
-            <div class="eyebrow">
-                COMMENT ÇA FONCTIONNE ?
-            </div>
-
-            <h2>
-                SIMPLE, MÊME SI VOUS N'ÊTES PAS
-                <span class="gradient">
-                    EXPERT EN AUTOMATISATION.
-                </span>
-            </h2>
-
-        </div>
-
-
-        <div class="steps">
-
-            <article class="step">
-                <div class="step-number">01</div>
-                <h3>Échange</h3>
-                <p>
-                    Vous nous expliquez simplement votre activité
-                    et la tâche qui vous fait perdre du temps.
-                </p>
-            </article>
-
-            <article class="step">
-                <div class="step-number">02</div>
-                <h3>Analyse</h3>
-                <p>
-                    Nous identifions les étapes répétitives et les
-                    possibilités d'automatisation.
-                </p>
-            </article>
-
-            <article class="step">
-                <div class="step-number">03</div>
-                <h3>Proposition</h3>
-                <p>
-                    Nous définissons une solution adaptée à votre
-                    besoin et à vos outils.
-                </p>
-            </article>
-
-            <article class="step">
-                <div class="step-number">04</div>
-                <h3>Mise en place</h3>
-                <p>
-                    La solution est mise en place puis ajustée
-                    selon son utilisation.
-                </p>
-            </article>
-
-            <article class="step">
-                <div class="step-number">05</div>
-                <h3>Suivi</h3>
-                <p>
-                    Nous pouvons faire évoluer l'automatisation
-                    lorsque le besoin change.
-                </p>
-            </article>
-
-        </div>
-
-
-        <div class="section-cta">
-
-            <a
-                href="pages/contact.html"
-                class="btn btn-primary"
-                data-conversion="quote-click"
-            >
-                Demander mon devis →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- TARIFS -->
-
-<section>
-
-    <div class="container">
-
-        <div class="section-head centered">
-
-            <div class="eyebrow">
-                TARIFS
-            </div>
-
-            <h2>
-                UNE SOLUTION ADAPTÉE À
-                <span class="gradient">
-                    VOTRE BESOIN.
-                </span>
-            </h2>
-
-            <p>
-                Chaque automatisation est différente.
-                Le tarif dépend notamment du processus à automatiser,
-                des outils concernés et du niveau de personnalisation nécessaire.
-            </p>
-
-        </div>
-
-
-        <div class="pricing-single">
-
-            <div class="pricing-icon">
-                €
-            </div>
-
-            <h3>
-                Devis personnalisé
-            </h3>
-
-            <p>
-                Nous n'affichons pas de tarif artificiel :
-                chaque automatisation est adaptée à vos besoins.
-            </p>
-
-            <ul>
-                <li>✓ Analyse de votre besoin</li>
-                <li>✓ Identification des tâches automatisables</li>
-                <li>✓ Solution adaptée à votre fonctionnement</li>
-                <li>✓ Prise en compte de vos outils</li>
-                <li>✓ Proposition personnalisée</li>
-            </ul>
-
-            <a
-                href="pages/contact.html"
-                class="btn btn-primary"
-                data-conversion="quote-click"
-            >
-                Demander un devis personnalisé →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- FAQ -->
-
-<section class="section-dark">
-
-    <div class="container">
-
-        <div class="section-head centered">
-
-            <div class="eyebrow">
-                FAQ
-            </div>
-
-            <h2>
-                VOS QUESTIONS,
-                <span class="gradient">
-                    NOS RÉPONSES.
-                </span>
-            </h2>
-
-        </div>
-
-
-        <div class="faq">
-
-            <details>
-                <summary>
-                    Combien coûte une automatisation ?
-                </summary>
-
-                <p>
-                    Le tarif dépend de la tâche, des outils utilisés,
-                    du niveau de personnalisation et du processus à mettre
-                    en place. Nous proposons donc un devis personnalisé
-                    après étude du besoin.
-                </p>
-            </details>
-
-
-            <details>
-                <summary>
-                    Est-ce adapté aux petites entreprises ?
-                </summary>
-
-                <p>
-                    Oui, une automatisation peut être pertinente pour une
-                    petite structure lorsqu'elle permet de simplifier une
-                    tâche réellement répétitive. L'objectif est d'adapter
-                    la solution au besoin réel.
-                </p>
-            </details>
-
-
-            <details>
-                <summary>
-                    Est-ce compatible avec mes outils actuels ?
-                </summary>
-
-                <p>
-                    Cela dépend des outils et de leurs possibilités
-                    d'intégration. Nous étudions votre environnement avant
-                    de proposer une solution.
-                </p>
-            </details>
-
-
-            <details>
-                <summary>
-                    Combien de temps faut-il pour mettre en place une automatisation ?
-                </summary>
-
-                <p>
-                    Le délai dépend de la complexité du processus,
-                    des outils concernés et du niveau de personnalisation.
-                    Le délai est donc défini en fonction du projet.
-                </p>
-            </details>
-
-
-            <details>
-                <summary>
-                    Peut-on créer une solution entièrement sur mesure ?
-                </summary>
-
-                <p>
-                    Oui. Une partie de notre approche consiste justement
-                    à partir du fonctionnement réel de votre entreprise
-                    afin d'étudier une solution adaptée.
-                </p>
-            </details>
-
-
-            <details>
-                <summary>
-                    Assurez-vous un suivi après la mise en place ?
-                </summary>
-
-                <p>
-                    Oui, le suivi et l'amélioration peuvent faire partie
-                    de l'accompagnement selon le projet et les besoins
-                    définis ensemble.
-                </p>
-            </details>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- CTA FINAL -->
-
-<section>
-
-    <div class="container">
-
-        <div class="cta">
-
-            <div class="eyebrow">
-                VOTRE PROCHAINE AUTOMATISATION
-            </div>
-
-            <h2>
-                QUELLE TÂCHE VOUS FAIT
-                <span class="gradient">
-                    PERDRE DU TEMPS ?
-                </span>
-            </h2>
-
-            <p>
-                Expliquez-nous simplement votre fonctionnement.
-                Nous étudierons ce qui peut être simplifié ou automatisé.
-            </p>
-
-            <div class="cta-actions">
-
-                <a
-                    href="pages/contact.html"
-                    class="btn btn-primary"
-                    data-conversion="quote-click"
-                >
-                    Demander mon devis →
-                </a>
-
-                <a
-                    href="mailto:contact.autopilotsolutions@gmail.com"
-                    class="btn btn-secondary"
-                    data-conversion="email-click"
-                >
-                    Écrire par email
-                </a>
-
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 </main>
 
 
-<footer>
+<footer class="site-footer">
 
-    <div class="container footer-grid">
+    <div class="container">
 
-        <div>
+        <div class="footer-grid">
 
-            <a href="index.html" class="logo">
+            <div>
 
-                <div class="logo-mark">
-                    ◯⌁
+                <div class="footer-title">
+                    AutoPilot Solutions
                 </div>
 
-                <div class="logo-text">
-                    AUTOPILOT
-                    <span>SOLUTIONS</span>
+                <p>
+                    Automatisation et optimisation des processus
+                    pour les entreprises.
+                </p>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <div class="footer-title">
+                    Navigation
                 </div>
-
-            </a>
-
-            <p class="footer-description">
-                Des solutions d'automatisation pensées pour simplifier
-                les tâches répétitives des entreprises.
-            </p>
-
-            <a
-                href="mailto:contact.autopilotsolutions@gmail.com"
-                class="footer-contact"
-            >
-                contact.autopilotsolutions@gmail.com
-            </a>
-
-        </div>
-
-
-        <div>
-
-            <h3>
-                Navigation
-            </h3>
-
-            <div class="footer-links">
 
                 <a href="index.html">
                     Accueil
-                </a>
-
-                <a href="pages/services.html">
-                    Services
                 </a>
 
                 <a href="pages/pour-qui.html">
                     Pour qui ?
                 </a>
 
-                <a href="pages/pourquoi-nous.html">
-                    Pourquoi nous ?
+                <a href="pages/services.html">
+                    Services
                 </a>
 
                 <a href="pages/tarifs.html">
                     Tarifs
                 </a>
 
-                <a href="pages/contact.html">
+            </div>
+
+
+            <div class="footer-col">
+
+                <div class="footer-title">
+                    Découvrir
+                </div>
+
+                <a href="pages/pourquoi-nous.html">
+                    Pourquoi nous ?
+                </a>
+
+                <a href="pages/comment-ca-marche.html">
+                    Comment ça marche
+                </a>
+
+                <a href="pages/faq.html">
+                    FAQ
+                </a>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <div class="footer-title">
                     Contact
+                </div>
+
+                <a href="pages/devis.html">
+                    Demander un devis
+                </a>
+
+                <a href="mailto:contact.autopilotsolutions@gmail.com">
+                    contact.autopilotsolutions@gmail.com
                 </a>
 
             </div>
@@ -1466,56 +1035,37 @@
         </div>
 
 
-        <div>
+        <div class="footer-bottom">
 
-            <h3>
-                Informations
-            </h3>
+            <span>
+                © <span data-current-year>2026</span>
+                AutoPilot Solutions.
+                Tous droits réservés.
+            </span>
 
-            <div class="footer-links">
+            <span>
 
                 <a href="pages/mentions-legales.html">
                     Mentions légales
                 </a>
 
-                <a href="pages/confidentialite.html">
+                ·
+
+                <a href="pages/politique-confidentialite.html">
                     Confidentialité
                 </a>
 
-                <a
-                    href="https://www.linkedin.com/in/nicolas-alepee-26319042a/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    LinkedIn
-                </a>
-
-            </div>
+            </span>
 
         </div>
-
-    </div>
-
-
-    <div class="container copyright">
-
-        © 2026 AutoPilot Solutions — Tous droits réservés.
 
     </div>
 
 </footer>
 
 
-<button
-    class="top"
-    type="button"
-    aria-label="Retour en haut"
->
-    ↑
-</button>
-
-
 <script src="js/script.js"></script>
 
 </body>
+
 </html>

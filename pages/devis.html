@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demander un devis | Automation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #08030f;
+            --bg2: #120522;
+            --card: rgba(27, 10, 52, .82);
+            --purple: #8b3dff;
+            --purple2: #bd72ff;
+            --text: #fff;
+            --muted: #bdb2d1;
+            --border: rgba(181, 108, 255, .22);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", Arial, sans-serif;
+            color: var(--text);
+            min-height: 100vh;
+            background:
+                radial-gradient(circle at 15% 10%, rgba(139, 61, 255, .22), transparent 28%),
+                radial-gradient(circle at 85% 25%, rgba(99, 30, 200, .18), transparent 30%),
+                radial-gradient(circle at 50% 100%, rgba(139, 61, 255, .12), transparent 35%),
+                linear-gradient(145deg, #08030f, #120522 50%, #08030f);
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -1;
+            opacity: .5;
+            background-image:
+                linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        input,
+        textarea,
+        select {
+            font: inherit;
+        }
+
+        .container {
+            width: min(1180px, calc(100% - 40px));
+            margin: auto;
+        }
+
+        /* HEADER */
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(18px);
+            background: rgba(8, 3, 15, .82);
+            border-bottom: 1px solid rgba(255,255,255,.07);
+        }
+
+        .navbar {
+            min-height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo img {
+            width: 185px;
+            max-height: 58px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .nav-links a {
+            color: #ddd5e9;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 11px 13px;
+            border-radius: 10px;
+            transition: .25s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: white;
+            background: rgba(139,61,255,.16);
+        }
+
+        .nav-links .nav-cta {
+            margin-left: 7px;
+            color: white;
+            background: linear-gradient(135deg, var(--purple), var(--purple2));
+            box-shadow: 0 10px 30px rgba(139,61,255,.28);
+        }
+
+        .menu-toggle {
+            display: none;
+            border: 0;
+            background: transparent;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* HERO */
+
+        .page-hero {
+            padding: 105px 0 55px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            left: 50%;
+            top: -370px;
+            transform: translateX(-50%);
+            background: radial-gradient(
+                circle,
+                rgba(140,48,255,.28),
+                transparent 68%
+            );
+            pointer-events: none;
+        }
+
+        .eyebrow {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 15px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: rgba(139,61,255,.09);
+            color: #d8b8ff;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .page-hero h1 {
+            position: relative;
+            margin: 18px auto;
+            max-width: 850px;
+            font-size: clamp(42px, 6vw, 68px);
+            line-height: 1.04;
+            letter-spacing: -3px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #fff, #c179ff, #8b3dff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .page-hero p {
+            position: relative;
+            max-width: 700px;
+            margin: auto;
+            color: var(--muted);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        /* FORM */
+
+        .section {
+            padding: 45px 0 100px;
+        }
+
+        .form-wrap {
+            position: relative;
+            max-width: 930px;
+            margin: auto;
+            padding: 42px;
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            background:
+                radial-gradient(
+                    circle at 90% 0%,
+                    rgba(139,61,255,.16),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    145deg,
+                    rgba(38,14,72,.88),
+                    rgba(15,5,30,.92)
+                );
+            box-shadow:
+                0 30px 90px rgba(60,0,130,.28),
+                inset 0 1px 0 rgba(255,255,255,.04);
+            overflow: hidden;
+        }
+
+        .form-wrap::before {
+            content: "";
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            right: -130px;
+            top: -130px;
+            border-radius: 50%;
+            background: radial-gradient(
+                circle,
+                rgba(181,108,255,.22),
+                transparent 70%
+            );
+            pointer-events: none;
+        }
+
+        .form-header {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .form-header h2 {
+            font-size: 28px;
+            margin-bottom: 9px;
+        }
+
+        .form-header p {
+            color: var(--muted);
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .form-grid {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 19px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .field.full {
+            grid-column: 1 / -1;
+        }
+
+        .field label {
+            font-size: 13px;
+            font-weight: 700;
+            color: #f4effb;
+        }
+
+        .field input,
+        .field select,
+        .field textarea {
+            width: 100%;
+            border: 1px solid rgba(255,255,255,.11);
+            border-radius: 13px;
+            background: rgba(255,255,255,.045);
+            color: white;
+            padding: 14px 15px;
+            outline: none;
+            transition: .25s;
+        }
+
+        .field input::placeholder,
+        .field textarea::placeholder {
+            color: #756b84;
+        }
+
+        .field input:focus,
+        .field select:focus,
+        .field textarea:focus {
+            border-color: var(--purple2);
+            background: rgba(139,61,255,.07);
+            box-shadow: 0 0 0 4px rgba(139,61,255,.10);
+        }
+
+        .field select option {
+            background: #16082b;
+            color: white;
+        }
+
+        .field textarea {
+            min-height: 180px;
+            resize: vertical;
+            line-height: 1.6;
+        }
+
+        /* CHOIX CLIENT */
+
+        .choices {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 4px;
+        }
+
+        .choice {
+            position: relative;
+        }
+
+        .choice input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .choice label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-height: 58px;
+            padding: 14px;
+            border: 1px solid rgba(255,255,255,.10);
+            border-radius: 14px;
+            background: rgba(255,255,255,.035);
+            cursor: pointer;
+            transition: .25s;
+        }
+
+        .choice label::before {
+            content: "";
+            width: 19px;
+            height: 19px;
+            flex-shrink: 0;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,.22);
+            background: rgba(255,255,255,.03);
+            transition: .25s;
+        }
+
+        .choice input:checked + label {
+            border-color: rgba(181,108,255,.65);
+            background: rgba(139,61,255,.13);
+            box-shadow: 0 10px 30px rgba(87,0,170,.15);
+        }
+
+        .choice input:checked + label::before {
+            background:
+                linear-gradient(135deg, #7c2cff, #bd72ff);
+            border-color: #bd72ff;
+            box-shadow: inset 0 0 0 4px #1a0930;
+        }
+
+        .choice label:hover {
+            border-color: rgba(181,108,255,.42);
+            transform: translateY(-2px);
+        }
+
+        .choice-text strong {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 3px;
+        }
+
+        .choice-text small {
+            color: #8f849d;
+            font-size: 11px;
+        }
+
+        /* NOTICE */
+
+        .notice {
+            position: relative;
+            margin-top: 22px;
+            padding: 15px 17px;
+            border: 1px solid var(--border);
+            border-radius: 13px;
+            background: rgba(139,61,255,.07);
+            color: var(--muted);
+            line-height: 1.6;
+            font-size: 13px;
+        }
+
+        /* BUTTON */
+
+        .form-actions {
+            position: relative;
+            margin-top: 25px;
+        }
+
+        .btn {
+            width: 100%;
+            min-height: 56px;
+            border: 0;
+            border-radius: 14px;
+            color: white;
+            font-weight: 800;
+            cursor: pointer;
+            background: linear-gradient(
+                135deg,
+                #7024e8,
+                #bd72ff
+            );
+            box-shadow: 0 16px 40px rgba(123,43,255,.30);
+            transition: .25s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 22px 55px rgba(123,43,255,.42);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .form-success {
+            display: none;
+            margin-top: 18px;
+            padding: 16px;
+            border: 1px solid rgba(181,108,255,.35);
+            border-radius: 13px;
+            background: rgba(139,61,255,.10);
+            color: #dfc7f8;
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+
+        .site-footer {
+            padding: 35px 0 25px;
+            border-top: 1px solid rgba(255,255,255,.07);
+            background: rgba(5,2,10,.65);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            color: #81758f;
+            font-size: 12px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 720px) {
+
+            .container {
+                width: min(100% - 28px, 1180px);
+            }
+
+            .navbar {
+                min-height: 70px;
+            }
+
+            .logo img {
+                width: 145px;
+                max-height: 48px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 14px;
+                right: 14px;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                padding: 10px;
+                background: rgba(15,5,28,.98);
+                border: 1px solid var(--border);
+                border-radius: 17px;
+                box-shadow: 0 25px 60px rgba(0,0,0,.55);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a,
+            .nav-links .nav-cta {
+                margin: 0;
+                padding: 14px;
+                font-size: 14px;
+            }
+
+            .page-hero {
+                padding: 80px 0 45px;
+            }
+
+            .page-hero h1 {
+                font-size: 41px;
+                letter-spacing: -2px;
+            }
+
+            .page-hero p {
+                font-size: 14px;
+            }
+
+            .section {
+                padding: 30px 0 70px;
+            }
+
+            .form-wrap {
+                padding: 23px 18px;
+                border-radius: 22px;
+            }
+
+            .form-header h2 {
+                font-size: 23px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .field.full {
+                grid-column: auto;
+            }
+
+            .choices {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container navbar">
+
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Logo">
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Accueil</a>
+            <a href="services.html">Services</a>
+            <a href="tarifs.html">Tarifs</a>
+            <a href="processus.html">Processus</a>
+            <a href="faq.html">FAQ</a>
+            <a href="devis.html" class="active nav-cta">Demander un devis</a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+    <section class="page-hero">
+        <div class="container">
+
+            <span class="eyebrow">
+                ✦ PROJET SUR MESURE
+            </span>
+
+            <h1>
+                Parlons de votre
+                <span class="gradient-text">projet</span>
+            </h1>
+
+            <p>
+                Expliquez-nous ce que vous souhaitez automatiser.
+                Nous étudierons votre besoin et vous proposerons
+                une solution adaptée à votre activité.
+            </p>
+
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container">
+
+            <div class="form-wrap">
+
+                <div class="form-header">
+                    <h2>Votre demande</h2>
+                    <p>
+                        Plus votre demande est précise, plus nous pourrons
+                        comprendre rapidement votre projet.
+                    </p>
+                </div>
+
+                <form id="devisForm">
+
+                    <div class="form-grid">
+
+                        <div class="field">
+                            <label for="nom">Nom / Prénom *</label>
+                            <input
+                                type="text"
+                                id="nom"
+                                name="nom"
+                                placeholder="Votre nom"
+                                required
+                            >
+                        </div>
+
+                        <div class="field">
+                            <label for="entreprise">Entreprise</label>
+                            <input
+                                type="text"
+                                id="entreprise"
+                                name="entreprise"
+                                placeholder="Nom de votre entreprise"
+                            >
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Adresse e-mail *</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="vous@exemple.fr"
+                                required
+                            >
+                        </div>
+
+                        <div class="field">
+                            <label for="telephone">Téléphone</label>
+                            <input
+                                type="tel"
+                                id="telephone"
+                                name="telephone"
+                                placeholder="+33 6 00 00 00 00"
+                            >
+                        </div>
+
+                        <div class="field full">
+                            <label for="service">
+                                Quel type de projet souhaitez-vous ?
+                            </label>
+
+                            <select id="service" name="service">
+                                <option value="">
+                                    Sélectionnez une option
+                                </option>
+                                <option value="automatisation">
+                                    Automatisation de tâches
+                                </option>
+                                <option value="workflow">
+                                    Création d'un workflow
+                                </option>
+                                <option value="integration">
+                                    Intégration de logiciels / outils
+                                </option>
+                                <option value="ia">
+                                    Automatisation avec IA
+                                </option>
+                                <option value="site">
+                                    Création ou amélioration d'un site
+                                </option>
+                                <option value="autre">
+                                    Autre projet
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="field full">
+
+                            <label>
+                                Qu'est-ce que vous souhaitez mettre en place ?
+                            </label>
+
+                            <div class="choices">
+
+                                <div class="choice">
+                                    <input
+                                        type="checkbox"
+                                        id="c1"
+                                        name="besoin[]"
+                                        value="gagner_du_temps"
+                                    >
+                                    <label for="c1">
+                                        <span class="choice-text">
+                                            <strong>Gagner du temps</strong>
+                                            <small>Réduire les tâches manuelles</small>
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div class="choice">
+                                    <input
+                                        type="checkbox"
+                                        id="c2"
+                                        name="besoin[]"
+                                        value="automatiser"
+                                    >
+                                    <label for="c2">
+                                        <span class="choice-text">
+                                            <strong>Automatiser des tâches</strong>
+                                            <small>Faire travailler les outils automatiquement</small>
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div class="choice">
+                                    <input
+                                        type="checkbox"
+                                        id="c3"
+                                        name="besoin[]"
+                                        value="ia"
+                                    >
+                                    <label for="c3">
+                                        <span class="choice-text">
+                                            <strong>Utiliser l'IA</strong>
+                                            <small>Ajouter de l'intelligence à vos processus</small>
+                                        </span>
+                                    </label>
+                                </div>
+
+                                <div class="choice">
+                                    <input
+                                        type="checkbox"
+                                        id="c4"
+                                        name="besoin[]"
+                                        value="integration"
+                                    >
+                                    <label for="c4">
+                                        <span class="choice-text">
+                                            <strong>Connecter mes outils</strong>
+                                            <small>Faire communiquer plusieurs logiciels</small>
+                                        </span>
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="field full">
+                            <label for="demande">
+                                Décrivez votre demande *
+                            </label>
+
+                            <textarea
+                                id="demande"
+                                name="demande"
+                                placeholder="Expliquez-nous ce que vous souhaitez faire, comment vous travaillez actuellement et ce que vous aimeriez automatiser..."
+                                required
+                            ></textarea>
+                        </div>
+
+                        <div class="field full">
+                            <label for="delai">
+                                Avez-vous une échéance ?
+                            </label>
+
+                            <select id="delai" name="delai">
+                                <option value="">
+                                    Pas encore défini
+                                </option>
+                                <option value="urgent">
+                                    Dès que possible
+                                </option>
+                                <option value="1-mois">
+                                    Dans le mois
+                                </option>
+                                <option value="1-3-mois">
+                                    Dans 1 à 3 mois
+                                </option>
+                                <option value="3-plus">
+                                    Dans plus de 3 mois
+                                </option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="notice">
+                        ✦ Votre demande sera étudiée afin de déterminer
+                        la solution la plus adaptée à votre projet.
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn">
+                            Envoyer ma demande de devis →
+                        </button>
+                    </div>
+
+                    <div class="form-success" id="formSuccess">
+                        ✓ Merci ! Votre demande a bien été préparée.
+                        Nous reviendrons vers vous rapidement.
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+
+        <div class="footer-bottom">
+            <span>© 2026 — Tous droits réservés.</span>
+
+            <span>
+                <a href="index.html">Accueil</a>
+                &nbsp;·&nbsp;
+                <a href="devis.html">Devis</a>
+            </span>
+        </div>
+
+    </div>
+</footer>
+
+
+<script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("open");
+    });
+
+    navLinks.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            navLinks.classList.remove("open");
+        });
+    });
+
+
+    const form = document.getElementById("devisForm");
+    const success = document.getElementById("formSuccess");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        success.style.display = "block";
+
+        success.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+    });
+</script>
+
+</body>
+</html>

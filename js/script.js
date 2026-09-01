@@ -1,128 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    /*
-     * ==========================================
-     * MENU MOBILE
-     * ==========================================
-     */
+    /* MENU MOBILE */
 
-    const menuBtn = document.querySelector("#menu-button");
-    const navLinks = document.querySelector("#main-navigation");
+    const menuButton = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav-links");
 
-    if (menuBtn && navLinks) {
+    if (menuButton && nav) {
 
-        menuBtn.addEventListener("click", () => {
+        menuButton.addEventListener("click", () => {
 
-            const isOpen = navLinks.classList.toggle("open");
+            const opened = nav.classList.toggle("open");
 
-            menuBtn.setAttribute(
+            menuButton.setAttribute(
                 "aria-expanded",
-                String(isOpen)
+                opened ? "true" : "false"
             );
 
-            menuBtn.setAttribute(
-                "aria-label",
-                isOpen
-                    ? "Fermer le menu"
-                    : "Ouvrir le menu"
-            );
-
-            menuBtn.textContent = isOpen ? "✕" : "☰";
-
-            document.body.classList.toggle(
-                "menu-open",
-                isOpen
-            );
+            menuButton.textContent = opened ? "✕" : "☰";
         });
 
 
-        navLinks.querySelectorAll("a").forEach((link) => {
+        nav.querySelectorAll("a").forEach(link => {
 
             link.addEventListener("click", () => {
 
-                navLinks.classList.remove("open");
+                nav.classList.remove("open");
 
-                menuBtn.setAttribute(
+                menuButton.setAttribute(
                     "aria-expanded",
                     "false"
                 );
 
-                menuBtn.setAttribute(
-                    "aria-label",
-                    "Ouvrir le menu"
-                );
-
-                menuBtn.textContent = "☰";
-
-                document.body.classList.remove(
-                    "menu-open"
-                );
-            });
-
-        });
-
-
-        window.addEventListener("resize", () => {
-
-            if (window.innerWidth > 850) {
-
-                navLinks.classList.remove("open");
-
-                menuBtn.setAttribute(
-                    "aria-expanded",
-                    "false"
-                );
-
-                menuBtn.setAttribute(
-                    "aria-label",
-                    "Ouvrir le menu"
-                );
-
-                menuBtn.textContent = "☰";
-
-                document.body.classList.remove(
-                    "menu-open"
-                );
-            }
-
-        });
-
-    }
-
-
-    /*
-     * ==========================================
-     * RETOUR EN HAUT
-     * ==========================================
-     */
-
-    const topBtn = document.querySelector(".top");
-
-    if (topBtn) {
-
-        const updateTopButton = () => {
-
-            topBtn.classList.toggle(
-                "visible",
-                window.scrollY > 500
-            );
-
-        };
-
-        window.addEventListener(
-            "scroll",
-            updateTopButton,
-            { passive: true }
-        );
-
-        updateTopButton();
-
-
-        topBtn.addEventListener("click", () => {
-
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
+                menuButton.textContent = "☰";
             });
 
         });
@@ -130,29 +39,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /*
-     * ==========================================
-     * FAQ
-     * ==========================================
-     */
+    /* FAQ */
 
-    const faqItems =
-        document.querySelectorAll(".faq details");
+    document.querySelectorAll(".faq-question").forEach(button => {
 
-    faqItems.forEach((item) => {
+        button.addEventListener("click", () => {
 
-        item.addEventListener("toggle", () => {
+            const item = button.closest(".faq-item");
 
-            if (item.open) {
+            if (!item) return;
 
-                faqItems.forEach((otherItem) => {
+            const wasOpen = item.classList.contains("open");
 
-                    if (otherItem !== item) {
-                        otherItem.removeAttribute("open");
-                    }
+            document.querySelectorAll(".faq-item").forEach(other => {
+                other.classList.remove("open");
+            });
 
-                });
-
+            if (!wasOpen) {
+                item.classList.add("open");
             }
 
         });
@@ -160,92 +64,41 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    /*
-     * ==========================================
-     * SUIVI DES CLICS
-     *
-     * Compatible avec Google Analytics
-     * si celui-ci est ajouté ultérieurement.
-     * ==========================================
-     */
+    /* TRACKING SIMPLE DES CTA */
 
-    document
-        .querySelectorAll("[data-conversion]")
-        .forEach((element) => {
+    document.querySelectorAll('a[href*="devis.html"]').forEach(link => {
 
-            element.addEventListener("click", () => {
+        link.addEventListener("click", () => {
 
-                const eventName =
-                    element.dataset.conversion;
-
-                if (
-                    typeof window.gtag === "function"
-                ) {
-
-                    window.gtag(
-                        "event",
-                        eventName
-                    );
-
-                }
-
-                /*
-                 * Pour permettre un suivi même avant
-                 * l'installation de Google Analytics.
-                 */
-
-                try {
-
-                    const current =
-                        Number(
-                            localStorage.getItem(
-                                `autopilot_${eventName}`
-                            ) || 0
-                        );
-
-                    localStorage.setItem(
-                        `autopilot_${eventName}`,
-                        String(current + 1)
-                    );
-
-                } catch (error) {
-
-                    /*
-                     * Certains navigateurs peuvent
-                     * bloquer localStorage.
-                     * Le site continue normalement.
-                     */
-
-                }
-
-            });
+            console.log("Conversion : clic Demander un devis");
 
         });
 
+    });
 
-    /*
-     * ==========================================
-     * FORMULAIRE
-     * ==========================================
-     */
 
-    const form =
-        document.querySelector("#contact-form");
+    /* TELEPHONE */
 
-    const formMessage =
-        document.querySelector("#form-message");
+    document.querySelectorAll('a[href^="tel:"]').forEach(link => {
 
+        link.addEventListener("click", () => {
+
+            console.log("Conversion : clic téléphone");
+
+        });
+
+    });
+
+
+    /* FORMULAIRE */
+
+    const form = document.querySelector("#devisForm");
 
     if (form) {
 
-        form.addEventListener("submit", (event) => {
+        form.addEventListener("submit", event => {
 
             event.preventDefault();
-
-
-            /*
-             * Vérification HTML native.
-             */
 
             if (!form.checkValidity()) {
 
@@ -254,178 +107,64 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
 
+            const success = document.querySelector("#formSuccess");
 
-            /*
-             * Récupération des données.
-             */
+            if (success) {
 
-            const formData =
-                new FormData(form);
+                success.style.display = "block";
 
-            const firstName =
-                formData.get("prenom") || "";
+                success.textContent =
+                    "Votre demande a bien été prise en compte. Nous reviendrons vers vous après réception de votre demande.";
 
-            const lastName =
-                formData.get("nom") || "";
-
-            const company =
-                formData.get("entreprise") || "";
-
-            const email =
-                formData.get("email") || "";
-
-            const phone =
-                formData.get("telephone") || "";
-
-            const activity =
-                formData.get("activite") || "";
-
-            const service =
-                formData.get("service") || "";
-
-            const task =
-                formData.get("tache") || "";
-
-            const message =
-                formData.get("message") || "";
-
-            const callback =
-                formData.get("rappel") === "oui";
-
-
-            /*
-             * Création d'un email.
-             *
-             * Cette méthode ouvre le logiciel
-             * de messagerie du visiteur.
-             */
-
-            const subject =
-                `Demande de devis - ${company || "Nouveau prospect"}`;
-
-
-            const body =
-`Bonjour AutoPilot Solutions,
-
-Je souhaite obtenir un devis.
-
-Nom : ${firstName} ${lastName}
-Entreprise : ${company}
-Email : ${email}
-Téléphone : ${phone}
-Activité : ${activity}
-Service recherché : ${service}
-
-Tâche ou problème à automatiser :
-${task}
-
-Besoins / message :
-${message}
-
-Je souhaite être rappelé :
-${callback ? "Oui" : "Non"}
-
-Merci.`;
-
-
-            const mailto =
-                `mailto:contact.autopilotsolutions@gmail.com` +
-                `?subject=${encodeURIComponent(subject)}` +
-                `&body=${encodeURIComponent(body)}`;
-
-
-            /*
-             * Envoi via le logiciel de messagerie.
-             */
-
-            window.location.href = mailto;
-
-
-            /*
-             * Message d'information.
-             */
-
-            if (formMessage) {
-
-                formMessage.style.display = "block";
-
-                formMessage.textContent =
-                    "Votre demande est prête. Votre logiciel de messagerie va s’ouvrir afin de l’envoyer à AutoPilot Solutions.";
+                success.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
 
             }
 
+            console.log("Conversion : formulaire de devis envoyé");
 
-            /*
-             * Événement de conversion.
-             */
-
-            if (
-                typeof window.gtag === "function"
-            ) {
-
-                window.gtag(
-                    "event",
-                    "form_submit"
-                );
-
-            }
-
-
-            try {
-
-                localStorage.setItem(
-                    "autopilot_form_submit",
-                    String(
-                        Number(
-                            localStorage.getItem(
-                                "autopilot_form_submit"
-                            ) || 0
-                        ) + 1
-                    )
-                );
-
-            } catch (error) {}
+            form.reset();
 
         });
 
     }
 
 
-    /*
-     * ==========================================
-     * ANCRAGES INTERNES
-     * ==========================================
-     */
+    /* ANIMATION DES ELEMENTS AU SCROLL */
 
-    document
-        .querySelectorAll('a[href^="#"]')
-        .forEach((link) => {
+    const animatedElements = document.querySelectorAll(
+        ".card, .flow-card, .benefit-item, .process-item"
+    );
 
-            link.addEventListener("click", (event) => {
+    if ("IntersectionObserver" in window) {
 
-                const id =
-                    link.getAttribute("href");
+        const observer = new IntersectionObserver(
+            entries => {
 
-                if (!id || id === "#") {
-                    return;
-                }
+                entries.forEach(entry => {
 
-                const target =
-                    document.querySelector(id);
+                    if (entry.isIntersecting) {
 
-                if (!target) {
-                    return;
-                }
+                        entry.target.classList.add("visible");
 
-                event.preventDefault();
+                        observer.unobserve(entry.target);
 
-                target.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
+                    }
+
                 });
 
-            });
+            },
+            {
+                threshold: 0.12
+            }
+        );
 
+        animatedElements.forEach(element => {
+            observer.observe(element);
         });
+
+    }
 
 });

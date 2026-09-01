@@ -2,95 +2,71 @@
 <html lang="fr">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>
-        Pour qui ? | AutoPilot Solutions
-    </title>
+    <title>Pour qui ? | AutoPilot Solutions</title>
 
     <meta
         name="description"
-        content="AutoPilot Solutions accompagne les TPE, PME, indépendants, artisans, commerçants et entreprises de services dans l'automatisation de leurs tâches répétitives."
-    >
-
-    <meta name="robots" content="index, follow">
-
-    <link
-        rel="canonical"
-        href="https://www.autopilotsolutions.fr/pages/pour-qui.html"
+        content="Découvrez pour quelles entreprises les solutions d'automatisation AutoPilot Solutions sont adaptées."
     >
 
     <link rel="stylesheet" href="../css/style.css">
-
 </head>
 
-<body>
+<body class="for-who-page">
 
-<header class="header">
+<header class="site-header">
 
-    <div class="container nav">
+    <div class="container navbar">
 
         <a href="../index.html" class="logo">
-
-            <div class="logo-mark">◯⌁</div>
-
-            <div class="logo-text">
-                AUTOPILOT
-                <span>SOLUTIONS</span>
-            </div>
-
+            <img src="../images/logo.png" alt="AutoPilot Solutions">
         </a>
 
-        <nav
-            class="nav-links"
-            id="main-navigation"
+        <button
+            class="menu-toggle"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+            type="button"
         >
+            ☰
+        </button>
 
-            <a href="../index.html">
-                Accueil
+        <nav class="nav-links">
+
+            <a href="../index.html">Accueil</a>
+
+            <a class="active" href="pour-qui.html">
+                Pour qui ?
             </a>
 
             <a href="services.html">
                 Services
             </a>
 
-            <a href="pour-qui.html" class="active">
-                Pour qui ?
-            </a>
-
             <a href="pourquoi-nous.html">
                 Pourquoi nous ?
+            </a>
+
+            <a href="comment-ca-marche.html">
+                Comment ça marche
             </a>
 
             <a href="tarifs.html">
                 Tarifs
             </a>
 
-            <a
-                href="contact.html"
-                class="btn btn-primary"
-            >
+            <a href="faq.html">
+                FAQ
+            </a>
+
+            <a class="nav-cta" href="devis.html">
                 Demander un devis
             </a>
 
         </nav>
-
-        <button
-            class="menu-btn"
-            id="menu-button"
-            type="button"
-            aria-label="Ouvrir le menu"
-            aria-expanded="false"
-            aria-controls="main-navigation"
-        >
-            ☰
-        </button>
 
     </div>
 
@@ -99,226 +75,667 @@
 
 <main>
 
-<section class="page-hero">
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
 
-    <div class="container">
+    <section class="for-who-hero">
 
-        <div class="eyebrow">
-            POUR QUI ?
-        </div>
+        <div class="for-who-grid"></div>
 
-        <h1>
-            SI VOTRE ENTREPRISE
-            <span class="gradient">
-                RÉPÈTE LES MÊMES TÂCHES.
-            </span>
-        </h1>
+        <div class="for-who-glow glow-one"></div>
+        <div class="for-who-glow glow-two"></div>
+        <div class="for-who-glow glow-three"></div>
 
-        <p>
-            Une automatisation peut être étudiée dès lors qu'un processus
-            est suffisamment répétitif, structuré et pertinent à simplifier.
-        </p>
+        <div class="container for-who-hero-inner">
 
-    </div>
+            <div class="for-who-content">
 
-</section>
+                <span class="eyebrow">
+                    POUR LES ENTREPRISES
+                </span>
 
+                <h1>
+                    L'automatisation n'est pas
+                    réservée aux grandes entreprises.
+                    <span class="gradient-text">
+                        Elle s'adapte à votre réalité.
+                    </span>
+                </h1>
 
-<section>
-
-    <div class="container">
-
-        <div class="cards">
-
-            <article class="card">
-                <div class="icon">🏢</div>
-                <h3>TPE</h3>
                 <p>
-                    Réduisez certaines tâches administratives ou
-                    commerciales répétitives sans complexifier votre organisation.
+                    Nos solutions s'adressent aux entreprises,
+                    équipes et indépendants qui souhaitent réduire
+                    les tâches répétitives et mieux structurer
+                    leur fonctionnement.
                 </p>
-            </article>
 
-            <article class="card">
-                <div class="icon">🏬</div>
-                <h3>PME</h3>
-                <p>
-                    Structurez et automatisez certains processus
-                    qui impliquent plusieurs personnes ou outils.
-                </p>
-            </article>
+                <div class="for-who-actions">
 
-            <article class="card">
-                <div class="icon">👤</div>
-                <h3>Indépendants</h3>
-                <p>
-                    Libérez du temps consacré aux tâches qui ne
-                    nécessitent pas toujours une intervention humaine.
-                </p>
-            </article>
+                    <a href="devis.html" class="btn btn-primary">
+                        Décrire mon besoin
+                    </a>
 
-            <article class="card">
-                <div class="icon">🛠</div>
-                <h3>Artisans</h3>
-                <p>
-                    Simplifiez les demandes, rendez-vous, relances
-                    et certaines tâches de suivi.
-                </p>
-            </article>
+                    <a href="#profils" class="for-who-discover">
+                        Voir les profils
+                        <span>↓</span>
+                    </a>
 
-            <article class="card">
-                <div class="icon">🛍</div>
-                <h3>Commerçants</h3>
-                <p>
-                    Améliorez le traitement et le suivi de certaines
-                    demandes clients.
-                </p>
-            </article>
+                </div>
 
-            <article class="card">
-                <div class="icon">💼</div>
-                <h3>Entreprises de services</h3>
-                <p>
-                    Automatisez certaines étapes liées aux prospects,
-                    clients, rendez-vous et documents.
-                </p>
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="section-dark">
-
-    <div class="container">
-
-        <div class="section-head centered">
-
-            <div class="eyebrow">
-                VOUS VOUS RECONNAISSEZ ?
             </div>
 
-            <h2>
-                COMMENCEZ PAR NOUS
-                <span class="gradient">
-                    EXPLIQUER LE PROBLÈME.
+
+            <!-- VISUEL CENTRAL -->
+
+            <div class="for-who-visual">
+
+                <div class="who-glow-core"></div>
+
+                <div class="who-orbit orbit-a"></div>
+                <div class="who-orbit orbit-b"></div>
+                <div class="who-orbit orbit-c"></div>
+
+                <div class="who-core">
+
+                    <div class="who-core-ring"></div>
+
+                    <div class="who-core-icon">
+                        ✦
+                    </div>
+
+                    <strong>
+                        AutoPilot
+                    </strong>
+
+                    <span>
+                        SOLUTIONS
+                    </span>
+
+                </div>
+
+
+                <div class="who-floating who-pme">
+
+                    <span class="who-floating-icon">
+                        ◈
+                    </span>
+
+                    <div>
+                        <small>
+                            PROFIL 01
+                        </small>
+
+                        <strong>
+                            PME
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="who-floating who-growth">
+
+                    <span class="who-floating-icon">
+                        ↗
+                    </span>
+
+                    <div>
+                        <small>
+                            PROFIL 02
+                        </small>
+
+                        <strong>
+                            Croissance
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="who-floating who-independent">
+
+                    <span class="who-floating-icon">
+                        ◉
+                    </span>
+
+                    <div>
+                        <small>
+                            PROFIL 03
+                        </small>
+
+                        <strong>
+                            Indépendant
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="who-floating who-team">
+
+                    <span class="who-floating-icon">
+                        ≋
+                    </span>
+
+                    <div>
+                        <small>
+                            PROFIL 04
+                        </small>
+
+                        <strong>
+                            Équipe
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INTRO
+         ===================================================== -->
+
+    <section class="section who-intro" id="profils">
+
+        <div class="container">
+
+            <div class="who-heading">
+
+                <span class="eyebrow">
+                    QUI PEUT EN BÉNÉFICIER ?
                 </span>
-            </h2>
 
-            <p>
-                Vous n'avez pas besoin de connaître la technique.
-                Décrivez simplement la tâche qui revient régulièrement
-                et nous étudierons les possibilités.
-            </p>
+                <h2>
+                    Si votre équipe répète les mêmes tâches,
+                    <span class="gradient-text">
+                        il existe peut-être une meilleure façon.
+                    </span>
+                </h2>
+
+                <p>
+                    L'objectif n'est pas de remplacer votre manière
+                    de travailler, mais d'identifier les opérations
+                    qui peuvent être simplifiées ou automatisées.
+                </p>
+
+            </div>
+
+
+            <div class="who-profiles">
+
+
+                <!-- PME -->
+
+                <article class="who-profile profile-pme">
+
+                    <div class="profile-top">
+
+                        <span class="profile-number">
+                            01
+                        </span>
+
+                        <div class="profile-icon">
+                            🏢
+                        </div>
+
+                    </div>
+
+                    <span class="profile-label">
+                        STRUCTURE
+                    </span>
+
+                    <h3>
+                        PME
+                    </h3>
+
+                    <p>
+                        Automatisez les tâches administratives et
+                        opérationnelles qui ralentissent votre équipe.
+                    </p>
+
+                    <div class="profile-line"></div>
+
+                    <span class="profile-bottom">
+                        Moins de tâches manuelles
+                    </span>
+
+                </article>
+
+
+                <!-- CROISSANCE -->
+
+                <article class="who-profile profile-growth">
+
+                    <div class="profile-top">
+
+                        <span class="profile-number">
+                            02
+                        </span>
+
+                        <div class="profile-icon">
+                            🚀
+                        </div>
+
+                    </div>
+
+                    <span class="profile-label">
+                        DÉVELOPPEMENT
+                    </span>
+
+                    <h3>
+                        Entreprises en croissance
+                    </h3>
+
+                    <p>
+                        Structurez vos processus pour accompagner votre
+                        développement sans multiplier les tâches manuelles.
+                    </p>
+
+                    <div class="profile-line"></div>
+
+                    <span class="profile-bottom">
+                        Des processus plus structurés
+                    </span>
+
+                </article>
+
+
+                <!-- INDÉPENDANTS -->
+
+                <article class="who-profile profile-independent">
+
+                    <div class="profile-top">
+
+                        <span class="profile-number">
+                            03
+                        </span>
+
+                        <div class="profile-icon">
+                            👤
+                        </div>
+
+                    </div>
+
+                    <span class="profile-label">
+                        AUTONOME
+                    </span>
+
+                    <h3>
+                        Indépendants
+                    </h3>
+
+                    <p>
+                        Gagnez du temps sur les tâches répétitives afin
+                        de vous concentrer davantage sur votre activité.
+                    </p>
+
+                    <div class="profile-line"></div>
+
+                    <span class="profile-bottom">
+                        Plus de temps pour votre activité
+                    </span>
+
+                </article>
+
+
+                <!-- COMMERCIAL -->
+
+                <article class="who-profile profile-sales">
+
+                    <div class="profile-top">
+
+                        <span class="profile-number">
+                            04
+                        </span>
+
+                        <div class="profile-icon">
+                            📋
+                        </div>
+
+                    </div>
+
+                    <span class="profile-label">
+                        COMMERCIAL
+                    </span>
+
+                    <h3>
+                        Équipes commerciales
+                    </h3>
+
+                    <p>
+                        Automatisez certaines étapes du suivi des
+                        prospects, des demandes et des relances.
+                    </p>
+
+                    <div class="profile-line"></div>
+
+                    <span class="profile-bottom">
+                        Suivi plus fluide
+                    </span>
+
+                </article>
+
+
+                <!-- ADMIN -->
+
+                <article class="who-profile profile-admin">
+
+                    <div class="profile-top">
+
+                        <span class="profile-number">
+                            05
+                        </span>
+
+                        <div class="profile-icon">
+                            ⚙️
+                        </div>
+
+                    </div>
+
+                    <span class="profile-label">
+                        ORGANISATION
+                    </span>
+
+                    <h3>
+                        Services administratifs
+                    </h3>
+
+                    <p>
+                        Simplifiez les opérations répétitives liées au
+                        traitement et au suivi des informations.
+                    </p>
+
+                    <div class="profile-line"></div>
+
+                    <span class="profile-bottom">
+                        Informations mieux organisées
+                    </span>
+
+                </article>
+
+
+                <!-- TOUTE ENTREPRISE -->
+
+                <article class="who-profile profile-all">
+
+                    <div class="profile-top">
+
+                        <span class="profile-number">
+                            06
+                        </span>
+
+                        <div class="profile-icon">
+                            ✦
+                        </div>
+
+                    </div>
+
+                    <span class="profile-label">
+                        SUR MESURE
+                    </span>
+
+                    <h3>
+                        Toute entreprise
+                    </h3>
+
+                    <p>
+                        Si une tâche est répétitive, structurée et prend
+                        du temps, elle peut potentiellement être automatisée.
+                    </p>
+
+                    <div class="profile-line"></div>
+
+                    <span class="profile-bottom">
+                        Votre processus → Notre analyse
+                    </span>
+
+                </article>
+
+            </div>
 
         </div>
 
-        <div class="section-cta">
+    </section>
 
-            <a
-                href="contact.html"
-                class="btn btn-primary"
-            >
-                Parler de mon projet →
-            </a>
+
+    <!-- =====================================================
+         SECTION "COMMENT SAVOIR"
+         ===================================================== -->
+
+    <section class="who-diagnostic">
+
+        <div class="container">
+
+            <div class="diagnostic-box">
+
+                <div class="diagnostic-content">
+
+                    <span class="eyebrow">
+                        VOUS HÉSITEZ ?
+                    </span>
+
+                    <h2>
+                        Vous ne savez pas si votre activité
+                        est adaptée à l'automatisation ?
+                    </h2>
+
+                    <p>
+                        Pas besoin de connaître les outils ou la
+                        technologie. Décrivez simplement ce que vous
+                        faites aujourd'hui et nous regarderons avec
+                        vous ce qui peut être amélioré.
+                    </p>
+
+                    <a href="devis.html" class="btn btn-primary">
+                        Décrire mon fonctionnement
+                    </a>
+
+                </div>
+
+
+                <div class="diagnostic-visual">
+
+                    <div class="diagnostic-grid"></div>
+
+                    <div class="diagnostic-question">
+                        <span>?</span>
+                    </div>
+
+                    <div class="diagnostic-tag tag-one">
+                        TÂCHE RÉPÉTITIVE
+                    </div>
+
+                    <div class="diagnostic-tag tag-two">
+                        PROCESSUS STRUCTURÉ
+                    </div>
+
+                    <div class="diagnostic-tag tag-three">
+                        TEMPS CONSOMMÉ
+                    </div>
+
+                    <div class="diagnostic-result">
+                        <span>✦</span>
+                        AUTOMATISATION POSSIBLE
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+
+    <!-- =====================================================
+         CTA
+         ===================================================== -->
+
+    <section class="section who-cta-section">
+
+        <div class="container">
+
+            <div class="who-final-cta">
+
+                <div class="who-cta-glow"></div>
+
+                <div class="who-cta-content">
+
+                    <span class="eyebrow">
+                        PAS BESOIN D'ÊTRE TECHNIQUE
+                    </span>
+
+                    <h2>
+                        Vous connaissez votre métier.
+                        <span class="gradient-text">
+                            Nous cherchons où l'automatiser.
+                        </span>
+                    </h2>
+
+                    <p>
+                        Expliquez-nous simplement votre façon de travailler.
+                        Nous vous aiderons à identifier les possibilités
+                        d'automatisation adaptées à votre situation.
+                    </p>
+
+                    <a href="devis.html" class="btn btn-primary">
+                        Demander un devis
+                    </a>
+
+                </div>
+
+                <div class="who-cta-orb">
+                    <div></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 
 </main>
 
 
-<footer>
+<footer class="site-footer">
 
-    <div class="container footer-grid">
+    <div class="container">
 
-        <div>
+        <div class="footer-grid">
 
-            <a href="../index.html" class="logo">
-                <div class="logo-mark">◯⌁</div>
+            <div>
 
-                <div class="logo-text">
-                    AUTOPILOT
-                    <span>SOLUTIONS</span>
+                <div class="footer-title">
+                    AutoPilot Solutions
                 </div>
-            </a>
 
-            <p class="footer-description">
-                Des solutions d'automatisation pensées pour simplifier
-                les tâches répétitives des entreprises.
-            </p>
+                <p>
+                    Automatisation et optimisation des processus
+                    pour les entreprises.
+                </p>
 
-            <a href="mailto:contact.autopilotsolutions@gmail.com">
-                contact.autopilotsolutions@gmail.com
-            </a>
+            </div>
 
-        </div>
 
-        <div>
+            <div class="footer-col">
 
-            <h3>Navigation</h3>
+                <div class="footer-title">
+                    Navigation
+                </div>
 
-            <div class="footer-links">
+                <a href="../index.html">
+                    Accueil
+                </a>
 
-                <a href="../index.html">Accueil</a>
-                <a href="services.html">Services</a>
-                <a href="pour-qui.html">Pour qui ?</a>
-                <a href="pourquoi-nous.html">Pourquoi nous ?</a>
-                <a href="tarifs.html">Tarifs</a>
-                <a href="contact.html">Contact</a>
+                <a href="pour-qui.html">
+                    Pour qui ?
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="tarifs.html">
+                    Tarifs
+                </a>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <div class="footer-title">
+                    Entreprise
+                </div>
+
+                <a href="pourquoi-nous.html">
+                    Pourquoi nous ?
+                </a>
+
+                <a href="comment-ca-marche.html">
+                    Comment ça marche
+                </a>
+
+                <a href="faq.html">
+                    FAQ
+                </a>
+
+            </div>
+
+
+            <div class="footer-col">
+
+                <div class="footer-title">
+                    Contact
+                </div>
+
+                <a href="devis.html">
+                    Demander un devis
+                </a>
+
+                <a href="mailto:contact.autopilotsolutions@gmail.com">
+                    ✉️ Nous écrire
+                </a>
 
             </div>
 
         </div>
 
-        <div>
 
-            <h3>Informations</h3>
+        <div class="footer-bottom">
 
-            <div class="footer-links">
+            <span>
+                © <span data-current-year>2026</span>
+                AutoPilot Solutions.
+                Tous droits réservés.
+            </span>
+
+            <span>
 
                 <a href="mentions-legales.html">
                     Mentions légales
                 </a>
 
-                <a href="confidentialite.html">
+                ·
+
+                <a href="politique-confidentialite.html">
                     Confidentialité
                 </a>
 
-                <a
-                    href="https://www.linkedin.com/in/nicolas-alepee-26319042a/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    LinkedIn
-                </a>
-
-            </div>
+            </span>
 
         </div>
 
     </div>
 
-    <div class="container copyright">
-        © 2026 AutoPilot Solutions — Tous droits réservés.
-    </div>
-
 </footer>
 
-
-<button
-    class="top"
-    type="button"
-    aria-label="Retour en haut"
->
-    ↑
-</button>
 
 <script src="../js/script.js"></script>
 
