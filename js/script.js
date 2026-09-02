@@ -206,8 +206,12 @@ document.addEventListener("DOMContentLoaded", () => {
              *
              * On NE fait PAS event.preventDefault().
              *
-             * Le formulaire doit continuer son envoi
-             * vers FormSubmit.
+             * Le formulaire continue son envoi
+             * vers l'adresse définie dans son attribut
+             * action.
+             *
+             * La validation côté navigateur ne remplace
+             * jamais la validation côté serveur.
              */
 
             if (!form.checkValidity()) {
@@ -275,7 +279,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const callbackCheckbox =
         document.querySelector(
-            '#rappel'
+            "#rappel"
         );
 
     if (callbackCheckbox) {

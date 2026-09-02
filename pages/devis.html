@@ -3,23 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Demander un devis | AutoPilot Solutions</title>
 
-    <meta
-        name="description"
-        content="Demandez un devis personnalisé pour automatiser vos tâches, connecter vos outils et améliorer vos processus avec AutoPilot Solutions."
-    >
-
+    <meta name="description" content="Demandez un devis personnalisé pour automatiser vos tâches, connecter vos outils et améliorer vos processus avec AutoPilot Solutions.">
     <meta name="robots" content="index, follow">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
@@ -48,30 +40,11 @@
             font-family: "Inter", Arial, sans-serif;
             color: var(--text);
             min-height: 100vh;
-
             background:
-                radial-gradient(
-                    circle at 15% 10%,
-                    rgba(139, 61, 255, .22),
-                    transparent 28%
-                ),
-                radial-gradient(
-                    circle at 85% 25%,
-                    rgba(99, 30, 200, .18),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 50% 100%,
-                    rgba(139, 61, 255, .12),
-                    transparent 35%
-                ),
-                linear-gradient(
-                    145deg,
-                    #08030f,
-                    #120522 50%,
-                    #08030f
-                );
-
+                radial-gradient(circle at 15% 10%, rgba(139, 61, 255, .22), transparent 28%),
+                radial-gradient(circle at 85% 25%, rgba(99, 30, 200, .18), transparent 30%),
+                radial-gradient(circle at 50% 100%, rgba(139, 61, 255, .12), transparent 35%),
+                linear-gradient(145deg, #08030f, #120522 50%, #08030f);
             overflow-x: hidden;
         }
 
@@ -82,18 +55,9 @@
             pointer-events: none;
             z-index: -1;
             opacity: .5;
-
             background-image:
-                linear-gradient(
-                    rgba(255,255,255,.018) 1px,
-                    transparent 1px
-                ),
-                linear-gradient(
-                    90deg,
-                    rgba(255,255,255,.018) 1px,
-                    transparent 1px
-                );
-
+                linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
             background-size: 60px 60px;
         }
 
@@ -114,36 +78,35 @@
             margin: auto;
         }
 
-        /* =========================
-           HEADER
-        ========================= */
+        /* HEADER */
 
         .site-header {
             position: sticky;
             top: 0;
             z-index: 1000;
-
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
-
             background: rgba(8, 3, 15, .82);
             border-bottom: 1px solid rgba(255,255,255,.07);
         }
 
         .navbar {
             min-height: 82px;
-
             display: flex;
             align-items: center;
             justify-content: space-between;
-
             gap: 20px;
+        }
+
+        .logo {
+            display: inline-flex;
+            align-items: center;
+            flex-shrink: 0;
         }
 
         .logo img {
             width: 185px;
             max-height: 58px;
-
             object-fit: contain;
             display: block;
         }
@@ -158,14 +121,11 @@
             display: inline-flex;
             align-items: center;
             gap: 7px;
-
             color: #ddd5e9;
             font-size: 13px;
             font-weight: 700;
-
             padding: 10px 12px;
             border-radius: 10px;
-
             transition: .25s;
         }
 
@@ -184,10 +144,8 @@
             color: #ddd5e9;
             font-size: 13px;
             font-weight: 600;
-
             padding: 11px 13px;
             border-radius: 10px;
-
             transition: .25s;
         }
 
@@ -199,85 +157,52 @@
 
         .nav-links .nav-cta {
             margin-left: 7px;
-
             color: white;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    var(--purple),
-                    var(--purple2)
-                );
-
-            box-shadow:
-                0 10px 30px rgba(139,61,255,.28);
+            background: linear-gradient(135deg, var(--purple), var(--purple2));
+            box-shadow: 0 10px 30px rgba(139,61,255,.28);
         }
 
         .menu-toggle {
             display: none;
-
             border: 0;
             background: transparent;
             color: white;
-
             font-size: 28px;
             line-height: 1;
-
             cursor: pointer;
         }
 
-        /* =========================
-           HERO
-        ========================= */
+        /* HERO */
 
         .page-hero {
             padding: 105px 0 55px;
-
             text-align: center;
-
             position: relative;
             overflow: hidden;
         }
 
         .page-hero::before {
             content: "";
-
             position: absolute;
-
             width: 600px;
             height: 600px;
-
             left: 50%;
             top: -370px;
-
             transform: translateX(-50%);
-
-            background:
-                radial-gradient(
-                    circle,
-                    rgba(140,48,255,.28),
-                    transparent 68%
-                );
-
+            background: radial-gradient(circle, rgba(140,48,255,.28), transparent 68%);
             pointer-events: none;
         }
 
         .eyebrow {
             position: relative;
-
             display: inline-flex;
             align-items: center;
             gap: 8px;
-
             padding: 9px 15px;
-
             border: 1px solid var(--border);
             border-radius: 999px;
-
             background: rgba(139,61,255,.09);
-
             color: #d8b8ff;
-
             font-size: 12px;
             font-weight: 800;
             letter-spacing: 1px;
@@ -285,105 +210,62 @@
 
         .page-hero h1 {
             position: relative;
-
             margin: 18px auto;
-
             max-width: 850px;
-
             font-size: clamp(42px, 6vw, 68px);
             line-height: 1.04;
             letter-spacing: -3px;
         }
 
         .gradient-text {
-            background:
-                linear-gradient(
-                    90deg,
-                    #fff,
-                    #c179ff,
-                    #8b3dff
-                );
-
+            background: linear-gradient(90deg, #fff, #c179ff, #8b3dff);
             -webkit-background-clip: text;
             background-clip: text;
-
             color: transparent;
         }
 
         .page-hero p {
             position: relative;
-
             max-width: 700px;
             margin: auto;
-
             color: var(--muted);
-
             line-height: 1.8;
             font-size: 16px;
         }
 
-        /* =========================
-           SECTION
-        ========================= */
+        /* SECTION */
 
         .section {
             padding: 45px 0 100px;
         }
 
-        /* =========================
-           FORM
-        ========================= */
+        /* FORM */
 
         .form-wrap {
             position: relative;
-
             max-width: 930px;
             margin: auto;
-
             padding: 42px;
-
             border: 1px solid var(--border);
             border-radius: 28px;
-
             background:
-                radial-gradient(
-                    circle at 90% 0%,
-                    rgba(139,61,255,.16),
-                    transparent 35%
-                ),
-                linear-gradient(
-                    145deg,
-                    rgba(38,14,72,.88),
-                    rgba(15,5,30,.92)
-                );
-
+                radial-gradient(circle at 90% 0%, rgba(139,61,255,.16), transparent 35%),
+                linear-gradient(145deg, rgba(38,14,72,.88), rgba(15,5,30,.92));
             box-shadow:
                 0 30px 90px rgba(60,0,130,.28),
                 inset 0 1px 0 rgba(255,255,255,.04);
-
             overflow: hidden;
         }
 
         .form-wrap::before {
             content: "";
-
             position: absolute;
-
             width: 250px;
             height: 250px;
-
             right: -130px;
             top: -130px;
-
             border-radius: 50%;
-
-            background:
-                radial-gradient(
-                    circle,
-                    rgba(181,108,255,.22),
-                    transparent 70%
-                );
-
+            background: radial-gradient(circle, rgba(181,108,255,.22), transparent 70%);
             pointer-events: none;
         }
 
@@ -405,12 +287,8 @@
 
         .form-grid {
             position: relative;
-
             display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
+            grid-template-columns: repeat(2, 1fr);
             gap: 19px;
         }
 
@@ -438,18 +316,12 @@
         .field select,
         .field textarea {
             width: 100%;
-
             border: 1px solid rgba(255,255,255,.11);
             border-radius: 13px;
-
             background: rgba(255,255,255,.045);
-
             color: white;
-
             padding: 14px 15px;
-
             outline: none;
-
             transition: .25s;
         }
 
@@ -462,12 +334,8 @@
         .field select:focus,
         .field textarea:focus {
             border-color: var(--purple2);
-
-            background:
-                rgba(139,61,255,.07);
-
-            box-shadow:
-                0 0 0 4px rgba(139,61,255,.10);
+            background: rgba(139,61,255,.07);
+            box-shadow: 0 0 0 4px rgba(139,61,255,.10);
         }
 
         .field input:invalid:not(:placeholder-shown),
@@ -482,24 +350,16 @@
 
         .field textarea {
             min-height: 180px;
-
             resize: vertical;
-
             line-height: 1.6;
         }
 
-        /* =========================
-           CHOIX
-        ========================= */
+        /* CHOIX */
 
         .choices {
             display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
+            grid-template-columns: repeat(2, 1fr);
             gap: 12px;
-
             margin-top: 4px;
         }
 
@@ -509,7 +369,6 @@
 
         .choice input {
             position: absolute;
-
             opacity: 0;
             pointer-events: none;
         }
@@ -517,79 +376,47 @@
         .choice label {
             display: flex;
             align-items: center;
-
             gap: 12px;
-
             min-height: 58px;
-
             padding: 14px;
-
             border: 1px solid rgba(255,255,255,.10);
             border-radius: 14px;
-
-            background:
-                rgba(255,255,255,.035);
-
+            background: rgba(255,255,255,.035);
             cursor: pointer;
-
             transition: .25s;
         }
 
         .choice label::before {
             content: "";
-
             width: 19px;
             height: 19px;
-
             flex-shrink: 0;
-
             border-radius: 6px;
-
             border: 1px solid rgba(255,255,255,.22);
-
-            background:
-                rgba(255,255,255,.03);
-
+            background: rgba(255,255,255,.03);
             transition: .25s;
         }
 
         .choice input:checked + label {
-            border-color:
-                rgba(181,108,255,.65);
-
-            background:
-                rgba(139,61,255,.13);
-
-            box-shadow:
-                0 10px 30px rgba(87,0,170,.15);
+            border-color: rgba(181,108,255,.65);
+            background: rgba(139,61,255,.13);
+            box-shadow: 0 10px 30px rgba(87,0,170,.15);
         }
 
         .choice input:checked + label::before {
-            background:
-                linear-gradient(
-                    135deg,
-                    #7c2cff,
-                    #bd72ff
-                );
-
+            background: linear-gradient(135deg, #7c2cff, #bd72ff);
             border-color: #bd72ff;
-
-            box-shadow:
-                inset 0 0 0 4px #1a0930;
+            box-shadow: inset 0 0 0 4px #1a0930;
         }
 
         .choice label:hover {
-            border-color:
-                rgba(181,108,255,.42);
-
+            border-color: rgba(181,108,255,.42);
             transform: translateY(-2px);
         }
 
         .choice-text strong {
             display: block;
-
             font-size: 13px;
-
             margin-bottom: 3px;
         }
 
@@ -598,37 +425,25 @@
             font-size: 11px;
         }
 
-        /* =========================
-           RAPPEL
-        ========================= */
+        /* RAPPEL */
 
         .callback-box {
             position: relative;
-
             display: flex;
             align-items: flex-start;
-
             gap: 12px;
-
             padding: 17px;
-
             margin-top: 2px;
-
             border: 1px solid rgba(181,108,255,.18);
             border-radius: 14px;
-
-            background:
-                rgba(139,61,255,.055);
+            background: rgba(139,61,255,.055);
         }
 
         .callback-box input {
             width: 18px;
             height: 18px;
-
             margin-top: 2px;
-
             flex-shrink: 0;
-
             accent-color: var(--purple);
             cursor: pointer;
         }
@@ -639,50 +454,33 @@
 
         .callback-box strong {
             display: block;
-
             color: white;
-
             font-size: 14px;
-
             margin-bottom: 4px;
         }
 
         .callback-box span {
             display: block;
-
             color: #9c91a9;
-
             font-size: 12px;
             line-height: 1.5;
         }
 
-        /* =========================
-           NOTICE
-        ========================= */
+        /* NOTICE */
 
         .notice {
             position: relative;
-
             margin-top: 22px;
-
             padding: 15px 17px;
-
             border: 1px solid var(--border);
             border-radius: 13px;
-
-            background:
-                rgba(139,61,255,.07);
-
+            background: rgba(139,61,255,.07);
             color: var(--muted);
-
             line-height: 1.6;
-
             font-size: 13px;
         }
 
-        /* =========================
-           ACTIONS
-        ========================= */
+        /* ACTIONS */
 
         .form-actions {
             position: relative;
@@ -691,36 +489,20 @@
 
         .btn {
             width: 100%;
-
             min-height: 56px;
-
             border: 0;
             border-radius: 14px;
-
             color: white;
-
             font-weight: 800;
-
             cursor: pointer;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #7024e8,
-                    #bd72ff
-                );
-
-            box-shadow:
-                0 16px 40px rgba(123,43,255,.30);
-
+            background: linear-gradient(135deg, #7024e8, #bd72ff);
+            box-shadow: 0 16px 40px rgba(123,43,255,.30);
             transition: .25s;
         }
 
         .btn:hover {
             transform: translateY(-3px);
-
-            box-shadow:
-                0 22px 55px rgba(123,43,255,.42);
+            box-shadow: 0 22px 55px rgba(123,43,255,.42);
         }
 
         .btn:active {
@@ -736,14 +518,10 @@
         .form-success,
         .form-error {
             display: none;
-
             margin-top: 18px;
             padding: 16px;
-
             border-radius: 13px;
-
             line-height: 1.6;
-
             font-size: 13px;
         }
 
@@ -759,19 +537,13 @@
             color: #ffb6c8;
         }
 
-        /* =========================
-           CONTACT RAPIDE
-        ========================= */
+        /* CONTACT */
 
         .quick-contact {
             max-width: 930px;
             margin: 25px auto 0;
-
             display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
+            grid-template-columns: repeat(2, 1fr);
             gap: 14px;
         }
 
@@ -779,82 +551,66 @@
             display: flex;
             align-items: center;
             gap: 13px;
-
             padding: 18px;
-
             border: 1px solid rgba(181,108,255,.16);
             border-radius: 15px;
-
-            background:
-                rgba(255,255,255,.025);
-
+            background: rgba(255,255,255,.025);
             transition: .25s;
         }
 
         .quick-contact-card:hover {
             transform: translateY(-2px);
-
-            border-color:
-                rgba(181,108,255,.35);
-
-            background:
-                rgba(139,61,255,.07);
+            border-color: rgba(181,108,255,.35);
+            background: rgba(139,61,255,.07);
         }
 
         .quick-contact-icon {
             width: 40px;
             height: 40px;
-
             display: grid;
             place-items: center;
-
             flex-shrink: 0;
-
             border-radius: 12px;
-
-            background:
-                rgba(139,61,255,.14);
-
+            background: rgba(139,61,255,.14);
             font-size: 18px;
         }
 
         .quick-contact-text small {
             display: block;
-
             color: #8f849d;
-
             font-size: 11px;
-
             margin-bottom: 3px;
         }
 
         .quick-contact-text strong {
             color: white;
-
             font-size: 13px;
         }
 
-        /* =========================
-           FOOTER
-        ========================= */
+        /* FOOTER */
 
         .site-footer {
             padding: 35px 0 25px;
-
-            border-top:
-                1px solid rgba(255,255,255,.07);
-
-            background:
-                rgba(5,2,10,.65);
+            border-top: 1px solid rgba(255,255,255,.07);
+            background: rgba(5,2,10,.65);
         }
 
         .footer-content {
             display: flex;
             justify-content: space-between;
-
             gap: 30px;
-
             margin-bottom: 25px;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-brand .logo img {
+            width: 185px;
+            max-height: 58px;
         }
 
         .footer-contact {
@@ -865,18 +621,14 @@
 
         .footer-contact-title {
             color: white;
-
             font-size: 13px;
             font-weight: 800;
-
             margin-bottom: 2px;
         }
 
         .footer-contact a {
             color: #a99db5;
-
             font-size: 12px;
-
             transition: .2s;
         }
 
@@ -887,29 +639,20 @@
         .footer-bottom {
             display: flex;
             justify-content: space-between;
-
             gap: 15px;
-
             color: #81758f;
-
             font-size: 12px;
-
             padding-top: 20px;
-
-            border-top:
-                1px solid rgba(255,255,255,.05);
+            border-top: 1px solid rgba(255,255,255,.05);
         }
 
         .footer-bottom a:hover {
             color: white;
         }
 
-        /* =========================
-           MOBILE
-        ========================= */
+        /* MOBILE */
 
         @media (max-width: 900px) {
-
             .nav-phone {
                 display: none;
             }
@@ -920,7 +663,6 @@
         }
 
         @media (max-width: 720px) {
-
             .container {
                 width: min(100% - 28px, 1180px);
             }
@@ -940,28 +682,17 @@
 
             .nav-links {
                 position: absolute;
-
                 top: 70px;
                 left: 14px;
                 right: 14px;
-
                 display: none;
-
                 flex-direction: column;
                 align-items: stretch;
-
                 padding: 10px;
-
-                background:
-                    rgba(15,5,28,.98);
-
-                border:
-                    1px solid var(--border);
-
+                background: rgba(15,5,28,.98);
+                border: 1px solid var(--border);
                 border-radius: 17px;
-
-                box-shadow:
-                    0 25px 60px rgba(0,0,0,.55);
+                box-shadow: 0 25px 60px rgba(0,0,0,.55);
             }
 
             .nav-links.open {
@@ -971,9 +702,7 @@
             .nav-links a,
             .nav-links .nav-cta {
                 margin: 0;
-
                 padding: 14px;
-
                 font-size: 14px;
             }
 
@@ -1037,13 +766,13 @@
         }
 
         @media (prefers-reduced-motion: reduce) {
-
             *,
             *::before,
             *::after {
                 animation-duration: .01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: .01ms !important;
+                scroll-behavior: auto !important;
             }
         }
     </style>
@@ -1052,11 +781,21 @@
 <body>
 
 <header class="site-header">
-
     <div class="container navbar">
 
-        <a href="index.html" class="logo" aria-label="AutoPilot Solutions - Accueil">
-            <img src="logo.png" alt="AutoPilot Solutions">
+        <!-- CHEMIN CORRIGÉ : devis.html est dans /pages/ -->
+        <a
+            href="../index.html"
+            class="logo"
+            aria-label="AutoPilot Solutions - Accueil"
+        >
+            <img
+                src="../images/logo-autopilot.png"
+                alt="AutoPilot Solutions"
+                width="185"
+                height="58"
+                decoding="async"
+            >
         </a>
 
         <div class="nav-right">
@@ -1081,7 +820,7 @@
 
             <nav class="nav-links" id="navLinks">
 
-                <a href="index.html">
+                <a href="../index.html">
                     Accueil
                 </a>
 
@@ -1093,7 +832,7 @@
                     Tarifs
                 </a>
 
-                <a href="processus.html">
+                <a href="comment-ca-marche.html">
                     Processus
                 </a>
 
@@ -1112,6 +851,7 @@
                 <a
                     href="devis.html"
                     class="active nav-cta"
+                    data-track="quote-click"
                 >
                     Demander un devis
                 </a>
@@ -1119,18 +859,12 @@
             </nav>
 
         </div>
-
     </div>
-
 </header>
-
 
 <main>
 
-    <!-- HERO -->
-
     <section class="page-hero">
-
         <div class="container">
 
             <span class="eyebrow">
@@ -1149,11 +883,7 @@
             </p>
 
         </div>
-
     </section>
-
-
-    <!-- FORMULAIRE -->
 
     <section class="section">
 
@@ -1162,27 +892,22 @@
             <div class="form-wrap">
 
                 <div class="form-header">
-
-                    <h2>
-                        Votre demande
-                    </h2>
+                    <h2>Votre demande</h2>
 
                     <p>
                         Plus votre demande est précise, plus nous pourrons
                         comprendre rapidement votre projet et identifier
                         les possibilités d'automatisation.
                     </p>
-
                 </div>
-
 
                 <form
                     id="devisForm"
                     action="https://formsubmit.co/contact.autopilotsolutions@gmail.com"
                     method="POST"
+                    accept-charset="UTF-8"
+                    novalidate
                 >
-
-                    <!-- CONFIGURATION ENVOI -->
 
                     <input
                         type="hidden"
@@ -1208,23 +933,18 @@
                         value="https://www.agency-nova.fr/pages/devis.html?success=1"
                     >
 
-                    <!-- ANTI-SPAM -->
-
                     <input
                         type="text"
                         name="_honey"
                         tabindex="-1"
                         autocomplete="off"
+                        aria-hidden="true"
                         style="display:none"
                     >
 
-
                     <div class="form-grid">
 
-                        <!-- NOM -->
-
                         <div class="field">
-
                             <label for="nom">
                                 Nom / Prénom
                                 <span class="required">*</span>
@@ -1236,16 +956,13 @@
                                 name="Nom / Prénom"
                                 placeholder="Votre nom et prénom"
                                 autocomplete="name"
+                                minlength="2"
+                                maxlength="100"
                                 required
                             >
-
                         </div>
 
-
-                        <!-- ENTREPRISE -->
-
                         <div class="field">
-
                             <label for="entreprise">
                                 Entreprise
                             </label>
@@ -1256,15 +973,11 @@
                                 name="Entreprise"
                                 placeholder="Nom de votre entreprise"
                                 autocomplete="organization"
+                                maxlength="150"
                             >
-
                         </div>
 
-
-                        <!-- TELEPHONE -->
-
                         <div class="field">
-
                             <label for="telephone">
                                 Téléphone
                             </label>
@@ -1276,15 +989,11 @@
                                 placeholder="07 88 79 72 45"
                                 autocomplete="tel"
                                 inputmode="tel"
+                                maxlength="30"
                             >
-
                         </div>
 
-
-                        <!-- EMAIL -->
-
                         <div class="field">
-
                             <label for="email">
                                 Adresse e-mail
                                 <span class="required">*</span>
@@ -1296,16 +1005,12 @@
                                 name="Email"
                                 placeholder="vous@exemple.fr"
                                 autocomplete="email"
+                                maxlength="254"
                                 required
                             >
-
                         </div>
 
-
-                        <!-- ACTIVITE -->
-
                         <div class="field full">
-
                             <label for="activite">
                                 Votre activité
                                 <span class="required">*</span>
@@ -1316,16 +1021,13 @@
                                 id="activite"
                                 name="Activité"
                                 placeholder="Ex. artisan, agence, commerce, consultant, entreprise de services..."
+                                minlength="2"
+                                maxlength="150"
                                 required
                             >
-
                         </div>
 
-
-                        <!-- SERVICE -->
-
                         <div class="field full">
-
                             <label for="service">
                                 Service recherché
                             </label>
@@ -1334,7 +1036,6 @@
                                 id="service"
                                 name="Service recherché"
                             >
-
                                 <option value="">
                                     Sélectionnez une option
                                 </option>
@@ -1362,16 +1063,10 @@
                                 <option value="Autre">
                                     Autre projet
                                 </option>
-
                             </select>
-
                         </div>
 
-
-                        <!-- CE QUE LE CLIENT VEUT AUTOMATISER -->
-
                         <div class="field full">
-
                             <label for="automatisation">
                                 Que souhaitez-vous automatiser ?
                                 <span class="required">*</span>
@@ -1381,16 +1076,13 @@
                                 id="automatisation"
                                 name="Que souhaitez-vous automatiser ?"
                                 placeholder="Ex. relances clients, prise de rendez-vous, traitement des demandes, emails, facturation, suivi des prospects, transmission d'informations entre outils..."
+                                minlength="10"
+                                maxlength="3000"
                                 required
                             ></textarea>
-
                         </div>
 
-
-                        <!-- BESOIN -->
-
                         <div class="field full">
-
                             <label>
                                 Quels sont vos objectifs ?
                             </label>
@@ -1398,7 +1090,6 @@
                             <div class="choices">
 
                                 <div class="choice">
-
                                     <input
                                         type="checkbox"
                                         id="c1"
@@ -1407,26 +1098,14 @@
                                     >
 
                                     <label for="c1">
-
                                         <span class="choice-text">
-
-                                            <strong>
-                                                Gagner du temps
-                                            </strong>
-
-                                            <small>
-                                                Réduire les tâches manuelles
-                                            </small>
-
+                                            <strong>Gagner du temps</strong>
+                                            <small>Réduire les tâches manuelles</small>
                                         </span>
-
                                     </label>
-
                                 </div>
 
-
                                 <div class="choice">
-
                                     <input
                                         type="checkbox"
                                         id="c2"
@@ -1435,26 +1114,14 @@
                                     >
 
                                     <label for="c2">
-
                                         <span class="choice-text">
-
-                                            <strong>
-                                                Automatiser des tâches
-                                            </strong>
-
-                                            <small>
-                                                Faire travailler les outils automatiquement
-                                            </small>
-
+                                            <strong>Automatiser des tâches</strong>
+                                            <small>Faire travailler les outils automatiquement</small>
                                         </span>
-
                                     </label>
-
                                 </div>
 
-
                                 <div class="choice">
-
                                     <input
                                         type="checkbox"
                                         id="c3"
@@ -1463,26 +1130,14 @@
                                     >
 
                                     <label for="c3">
-
                                         <span class="choice-text">
-
-                                            <strong>
-                                                Utiliser l'IA
-                                            </strong>
-
-                                            <small>
-                                                Ajouter de l'intelligence à vos processus
-                                            </small>
-
+                                            <strong>Utiliser l'IA</strong>
+                                            <small>Ajouter de l'intelligence à vos processus</small>
                                         </span>
-
                                     </label>
-
                                 </div>
 
-
                                 <div class="choice">
-
                                     <input
                                         type="checkbox"
                                         id="c4"
@@ -1491,32 +1146,17 @@
                                     >
 
                                     <label for="c4">
-
                                         <span class="choice-text">
-
-                                            <strong>
-                                                Connecter mes outils
-                                            </strong>
-
-                                            <small>
-                                                Faire communiquer plusieurs logiciels
-                                            </small>
-
+                                            <strong>Connecter mes outils</strong>
+                                            <small>Faire communiquer plusieurs logiciels</small>
                                         </span>
-
                                     </label>
-
                                 </div>
 
                             </div>
-
                         </div>
 
-
-                        <!-- MESSAGE -->
-
                         <div class="field full">
-
                             <label for="message">
                                 Message complémentaire
                             </label>
@@ -1525,15 +1165,11 @@
                                 id="message"
                                 name="Message complémentaire"
                                 placeholder="Ajoutez ici toute information utile concernant votre fonctionnement, vos outils actuels ou votre projet..."
+                                maxlength="5000"
                             ></textarea>
-
                         </div>
 
-
-                        <!-- DELAI -->
-
                         <div class="field full">
-
                             <label for="delai">
                                 Avez-vous une échéance ?
                             </label>
@@ -1542,7 +1178,6 @@
                                 id="delai"
                                 name="Échéance"
                             >
-
                                 <option value="">
                                     Pas encore défini
                                 </option>
@@ -1562,16 +1197,10 @@
                                 <option value="Dans plus de 3 mois">
                                     Dans plus de 3 mois
                                 </option>
-
                             </select>
-
                         </div>
 
-
-                        <!-- RAPPEL -->
-
                         <div class="field full">
-
                             <div class="callback-box">
 
                                 <input
@@ -1582,7 +1211,6 @@
                                 >
 
                                 <label for="rappel">
-
                                     <strong>
                                         📞 Je souhaite être rappelé
                                     </strong>
@@ -1592,32 +1220,21 @@
                                         cochez cette case et nous vous recontacterons
                                         au numéro indiqué dans votre demande.
                                     </span>
-
                                 </label>
 
                             </div>
-
                         </div>
 
                     </div>
 
-
-                    <!-- NOTICE -->
-
                     <div class="notice">
-
                         ✦ Votre demande sera étudiée afin de déterminer
                         la solution la plus adaptée à votre projet.
                         Aucun besoin d'être expert en informatique :
                         nous nous chargeons de la partie technique.
-
                     </div>
 
-
-                    <!-- BOUTON -->
-
                     <div class="form-actions">
-
                         <button
                             type="submit"
                             class="btn"
@@ -1626,41 +1243,33 @@
                         >
                             Demander mon devis →
                         </button>
-
                     </div>
-
-
-                    <!-- SUCCES -->
 
                     <div
                         class="form-success"
                         id="formSuccess"
+                        role="status"
+                        aria-live="polite"
                     >
                         ✓ Votre demande a bien été envoyée.
                         Merci pour votre confiance. Nous reviendrons
                         vers vous rapidement.
-
                     </div>
-
-
-                    <!-- ERREUR -->
 
                     <div
                         class="form-error"
                         id="formError"
+                        role="alert"
+                        aria-live="assertive"
                     >
                         Une erreur est survenue lors de l'envoi.
                         Veuillez réessayer ou nous contacter directement
                         au 07 88 79 72 45.
-
                     </div>
 
                 </form>
 
             </div>
-
-
-            <!-- CONTACT DIRECT -->
 
             <div class="quick-contact">
 
@@ -1669,13 +1278,11 @@
                     class="quick-contact-card"
                     data-track="phone-click"
                 >
-
                     <div class="quick-contact-icon">
                         📞
                     </div>
 
                     <div class="quick-contact-text">
-
                         <small>
                             Besoin d'échanger directement ?
                         </small>
@@ -1683,24 +1290,19 @@
                         <strong>
                             07 88 79 72 45
                         </strong>
-
                     </div>
-
                 </a>
-
 
                 <a
                     href="mailto:contact.autopilotsolutions@gmail.com"
                     class="quick-contact-card"
                     data-track="email-click"
                 >
-
                     <div class="quick-contact-icon">
                         ✉
                     </div>
 
                     <div class="quick-contact-text">
-
                         <small>
                             Vous préférez écrire ?
                         </small>
@@ -1708,21 +1310,15 @@
                         <strong>
                             contact.autopilotsolutions@gmail.com
                         </strong>
-
                     </div>
-
                 </a>
 
             </div>
 
         </div>
-
     </section>
 
 </main>
-
-
-<!-- FOOTER -->
 
 <footer class="site-footer">
 
@@ -1730,24 +1326,43 @@
 
         <div class="footer-content">
 
-            <div class="footer-contact">
+            <div class="footer-brand">
 
-                <span class="footer-contact-title">
-                    AutoPilot Solutions
-                </span>
-
-                <a href="tel:+33788797245">
-                    📞 07 88 79 72 45
+                <!-- CHEMIN CORRIGÉ ICI AUSSI -->
+                <a
+                    href="../index.html"
+                    class="logo"
+                    aria-label="AutoPilot Solutions - Accueil"
+                >
+                    <img
+                        src="../images/logo-autopilot.png"
+                        alt="AutoPilot Solutions"
+                        width="185"
+                        height="58"
+                        loading="lazy"
+                        decoding="async"
+                    >
                 </a>
 
-                <a href="mailto:contact.autopilotsolutions@gmail.com">
-                    ✉ contact.autopilotsolutions@gmail.com
-                </a>
+                <div class="footer-contact">
+
+                    <span class="footer-contact-title">
+                        AutoPilot Solutions
+                    </span>
+
+                    <a href="tel:+33788797245">
+                        📞 07 88 79 72 45
+                    </a>
+
+                    <a href="mailto:contact.autopilotsolutions@gmail.com">
+                        ✉ contact.autopilotsolutions@gmail.com
+                    </a>
+
+                </div>
 
             </div>
 
         </div>
-
 
         <div class="footer-bottom">
 
@@ -1757,7 +1372,7 @@
 
             <span>
 
-                <a href="index.html">
+                <a href="../index.html">
                     Accueil
                 </a>
 
@@ -1781,13 +1396,7 @@
 
 </footer>
 
-
 <script>
-
-    /* =========================
-       MENU MOBILE
-    ========================= */
-
     const menuToggle = document.getElementById("menuToggle");
     const navLinks = document.getElementById("navLinks");
 
@@ -1809,9 +1418,7 @@
                     ? "Fermer le menu"
                     : "Ouvrir le menu"
             );
-
         });
-
 
         navLinks
             .querySelectorAll("a")
@@ -1832,18 +1439,10 @@
                             "aria-label",
                             "Ouvrir le menu"
                         );
-
                     }
                 );
-
             });
-
     }
-
-
-    /* =========================
-       FORMULAIRE
-    ========================= */
 
     const form =
         document.getElementById("devisForm");
@@ -1857,17 +1456,28 @@
     const submitButton =
         document.getElementById("submitButton");
 
-
     if (form) {
 
         form.addEventListener(
             "submit",
-            function () {
+            function (event) {
 
-                /*
-                 * Le formulaire est envoyé par FormSubmit.
-                 * On ne bloque surtout pas le submit ici.
-                 */
+                if (!form.checkValidity()) {
+
+                    event.preventDefault();
+
+                    form.reportValidity();
+
+                    if (error) {
+                        error.style.display = "block";
+                    }
+
+                    return;
+                }
+
+                if (error) {
+                    error.style.display = "none";
+                }
 
                 if (submitButton) {
 
@@ -1875,18 +1485,10 @@
 
                     submitButton.textContent =
                         "Envoi de votre demande…";
-
                 }
-
             }
         );
-
     }
-
-
-    /* =========================
-       MESSAGE DE RETOUR
-    ========================= */
 
     const params =
         new URLSearchParams(window.location.search);
@@ -1905,15 +1507,7 @@
             top: 300,
             behavior: "smooth"
         });
-
     }
-
-
-    /* =========================
-       TRACKING SIMPLE
-       Prêt pour Google Analytics
-       / autre outil plus tard.
-    ========================= */
 
     document
         .querySelectorAll("[data-track]")
@@ -1924,15 +1518,7 @@
                 function () {
 
                     const eventName =
-                        element.getAttribute(
-                            "data-track"
-                        );
-
-                    /*
-                     * Si Google Analytics est ajouté
-                     * plus tard, le tracking pourra
-                     * être branché ici.
-                     */
+                        element.getAttribute("data-track");
 
                     if (
                         typeof window.gtag === "function"
@@ -1942,18 +1528,13 @@
                             "event",
                             eventName,
                             {
-                                event_category:
-                                    "conversion"
+                                event_category: "conversion"
                             }
                         );
-
                     }
-
                 }
             );
-
         });
-
 </script>
 
 </body>
