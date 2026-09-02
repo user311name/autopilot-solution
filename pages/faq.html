@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,7 @@
 
     <meta
         name="description"
-        content="Découvrez les réponses aux questions fréquentes sur l'automatisation avec AutoPilot Solutions."
+        content="Retrouvez les réponses aux questions fréquentes sur l'automatisation des entreprises avec AutoPilot Solutions."
     >
 
     <link rel="stylesheet" href="../css/style.css">
@@ -17,689 +16,1265 @@
 
 <body>
 
-<header class="site-header">
-    <div class="container navbar">
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
 
-        <a href="../index.html" class="logo">
-            <img src="../images/logo.png" alt="AutoPilot Solutions">
-        </a>
+    <header class="site-header">
+        <div class="container navbar">
 
-        <button
-            class="menu-toggle"
-            type="button"
-            aria-label="Ouvrir le menu"
-            aria-expanded="false"
-        >
-            ☰
-        </button>
-
-        <nav class="nav-links">
-
-            <a href="../index.html">Accueil</a>
-            <a href="pour-qui.html">Pour qui ?</a>
-            <a href="services.html">Services</a>
-            <a href="pourquoi-nous.html">Pourquoi nous ?</a>
-            <a href="comment-ca-marche.html">Comment ça marche</a>
-            <a href="tarifs.html">Tarifs</a>
-            <a class="active" href="faq.html">FAQ</a>
-
-            <a class="nav-cta" href="devis.html">
-                Demander un devis
+            <a href="../index.html" class="logo">
+                <img
+                    src="../images/logo.png"
+                    alt="AutoPilot Solutions"
+                >
             </a>
 
-        </nav>
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Ouvrir le menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
 
-    </div>
-</header>
+            <nav class="nav-links" id="mainNav">
 
+                <a href="../index.html">
+                    Accueil
+                </a>
 
-<main>
+                <a href="pour-qui.html">
+                    Pour qui ?
+                </a>
 
-    <!-- HERO -->
+                <a href="services.html">
+                    Services
+                </a>
 
-    <section class="faq-hero">
+                <a href="pourquoi-nous.html">
+                    Pourquoi nous ?
+                </a>
 
-        <div class="faq-orb faq-orb-1"></div>
-        <div class="faq-orb faq-orb-2"></div>
+                <a href="comment-ca-marche.html">
+                    Comment ça marche ?
+                </a>
 
-        <div class="container faq-hero-grid">
+                <a href="tarifs.html">
+                    Tarifs
+                </a>
 
-            <div class="faq-hero-content">
+                <a href="faq.html" class="active">
+                    FAQ
+                </a>
 
-                <span class="faq-badge">
-                    QUESTIONS FRÉQUENTES
-                </span>
+                <a href="devis.html" class="nav-cta">
+                    Demander un devis
+                </a>
 
-                <h1>
-                    Vos questions,<br>
-                    nos <span>réponses.</span>
-                </h1>
-
-                <p>
-                    Retrouvez les réponses aux questions les plus courantes
-                    sur l'automatisation et nos solutions.
-                </p>
-
-                <div class="faq-search">
-                    <span class="search-icon">⌕</span>
-
-                    <input
-                        type="text"
-                        id="faqSearch"
-                        placeholder="Rechercher une question..."
-                    >
-                </div>
-
-            </div>
-
-
-            <!-- VISUEL HERO -->
-
-            <div class="faq-visual">
-
-                <div class="faq-stars">
-                    <span>✦</span>
-                    <span>✦</span>
-                    <span>✧</span>
-                </div>
-
-                <div class="faq-orbit orbit-1"></div>
-                <div class="faq-orbit orbit-2"></div>
-                <div class="faq-orbit orbit-3"></div>
-
-                <div class="faq-document">
-
-                    <div class="document-line long"></div>
-                    <div class="document-line"></div>
-                    <div class="document-line short"></div>
-                    <div class="document-line"></div>
-
-                </div>
-
-                <div class="faq-question-icon">
-                    ?
-                </div>
-
-                <div class="faq-platform"></div>
-
-            </div>
+            </nav>
 
         </div>
+    </header>
 
-    </section>
 
+    <!-- =====================================================
+         HERO FAQ
+    ====================================================== -->
 
-    <!-- CATEGORIES -->
+    <main>
 
-    <section class="faq-categories-section">
+        <section class="faq-hero">
 
-        <div class="container">
+            <div class="container">
 
-            <div class="faq-category-grid">
+                <div class="faq-hero-grid">
 
-                <article class="faq-category">
+                    <div class="faq-hero-content">
 
-                    <div class="category-icon">
-                        ⚡
-                    </div>
+                        <div class="badge">
+                            QUESTIONS FRÉQUENTES
+                        </div>
 
-                    <div class="category-number">01</div>
+                        <h1>
+                            Vos questions,
+                            <span>nos réponses.</span>
+                        </h1>
 
-                    <h2>Généralités</h2>
-
-                    <p>
-                        Comprenez les bases de l'automatisation
-                        et son fonctionnement.
-                    </p>
-
-                    <a href="#faq-questions">
-                        En savoir plus <span>→</span>
-                    </a>
-
-                </article>
-
-
-                <article class="faq-category">
-
-                    <div class="category-icon">
-                        ☷
-                    </div>
-
-                    <div class="category-number">02</div>
-
-                    <h2>Fonctionnalités</h2>
-
-                    <p>
-                        Découvrez les types de tâches et de processus
-                        que nous pouvons automatiser.
-                    </p>
-
-                    <a href="#faq-questions">
-                        En savoir plus <span>→</span>
-                    </a>
-
-                </article>
-
-
-                <article class="faq-category">
-
-                    <div class="category-icon">
-                        ♙
-                    </div>
-
-                    <div class="category-number">03</div>
-
-                    <h2>Pour votre entreprise</h2>
-
-                    <p>
-                        L'automatisation est-elle faite pour votre
-                        structure ? On vous explique.
-                    </p>
-
-                    <a href="#faq-questions">
-                        En savoir plus <span>→</span>
-                    </a>
-
-                </article>
-
-
-                <article class="faq-category">
-
-                    <div class="category-icon">
-                        ✚
-                    </div>
-
-                    <div class="category-number">04</div>
-
-                    <h2>Intégrations</h2>
-
-                    <p>
-                        Vos outils, vos habitudes : découvrez comment
-                        nous nous adaptons à votre environnement.
-                    </p>
-
-                    <a href="#faq-questions">
-                        En savoir plus <span>→</span>
-                    </a>
-
-                </article>
-
-
-                <article class="faq-category">
-
-                    <div class="category-icon">
-                        €
-                    </div>
-
-                    <div class="category-number">05</div>
-
-                    <h2>Tarifs & ROI</h2>
-
-                    <p>
-                        Combien ça coûte ? Quel retour sur investissement
-                        attendre ?
-                    </p>
-
-                    <a href="#faq-questions">
-                        En savoir plus <span>→</span>
-                    </a>
-
-                </article>
-
-
-                <article class="faq-category">
-
-                    <div class="category-icon">
-                        🚀
-                    </div>
-
-                    <div class="category-number">06</div>
-
-                    <h2>Démarrage</h2>
-
-                    <p>
-                        Les étapes pour lancer votre projet
-                        d'automatisation simplement.
-                    </p>
-
-                    <a href="#faq-questions">
-                        En savoir plus <span>→</span>
-                    </a>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- QUESTIONS -->
-
-    <section class="faq-questions-section" id="faq-questions">
-
-        <div class="container">
-
-            <div class="faq-section-heading">
-
-                <span>LES QUESTIONS QUE VOUS VOUS POSEZ</span>
-
-                <h2>
-                    Une question ?
-                    <strong>On a probablement la réponse.</strong>
-                </h2>
-
-            </div>
-
-
-            <div class="faq-list" id="faqList">
-
-
-                <article class="faq-item">
-
-                    <button class="faq-question" type="button">
-
-                        <span class="faq-index">01</span>
-
-                        <span class="faq-question-text">
-                            Qu'est-ce que l'automatisation ?
-                        </span>
-
-                        <span class="faq-plus">+</span>
-
-                    </button>
-
-                    <div class="faq-answer">
                         <p>
-                            L'automatisation consiste à faire exécuter
-                            automatiquement certaines tâches ou étapes
-                            d'un processus par des outils numériques.
+                            Vous avez une question sur l'automatisation,
+                            nos services ou notre accompagnement ?
+                            Retrouvez ici les réponses aux questions
+                            les plus fréquentes.
                         </p>
+
+                        <div class="faq-search">
+
+                            <span class="search-icon">
+                                🔎
+                            </span>
+
+                            <input
+                                type="search"
+                                id="faqSearch"
+                                placeholder="Rechercher une question..."
+                                aria-label="Rechercher une question"
+                            >
+
+                        </div>
+
                     </div>
 
-                </article>
 
+                    <div class="faq-visual">
 
-                <article class="faq-item">
+                        <div class="faq-orbit orbit-1"></div>
+                        <div class="faq-orbit orbit-2"></div>
+                        <div class="faq-orbit orbit-3"></div>
 
-                    <button class="faq-question" type="button">
+                        <div class="faq-document">
 
-                        <span class="faq-index">02</span>
+                            <div class="faq-document-top">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
 
-                        <span class="faq-question-text">
-                            Quelles tâches peut-on automatiser ?
-                        </span>
+                            <div class="faq-document-content">
 
-                        <span class="faq-plus">+</span>
+                                <div class="faq-document-line large"></div>
+                                <div class="faq-document-line"></div>
+                                <div class="faq-document-line"></div>
+                                <div class="faq-document-line short"></div>
 
-                    </button>
+                            </div>
 
-                    <div class="faq-answer">
-                        <p>
-                            De nombreuses tâches répétitives peuvent être
-                            automatisées : traitement de demandes,
-                            notifications, emails, collecte d'informations,
-                            suivi commercial ou certaines opérations
-                            administratives.
-                        </p>
+                            <div class="faq-question-mark">
+                                ?
+                            </div>
+
+                        </div>
+
                     </div>
 
-                </article>
-
-
-                <article class="faq-item">
-
-                    <button class="faq-question" type="button">
-
-                        <span class="faq-index">03</span>
-
-                        <span class="faq-question-text">
-                            Est-ce adapté aux petites entreprises ?
-                        </span>
-
-                        <span class="faq-plus">+</span>
-
-                    </button>
-
-                    <div class="faq-answer">
-                        <p>
-                            Oui. Une automatisation peut être conçue selon
-                            la taille, les outils et les besoins spécifiques
-                            de chaque entreprise.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                <article class="faq-item">
-
-                    <button class="faq-question" type="button">
-
-                        <span class="faq-index">04</span>
-
-                        <span class="faq-question-text">
-                            Dois-je changer tous mes outils ?
-                        </span>
-
-                        <span class="faq-plus">+</span>
-
-                    </button>
-
-                    <div class="faq-answer">
-                        <p>
-                            Non. L'objectif est généralement de travailler
-                            avec vos outils existants lorsque cela est
-                            possible et pertinent.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                <article class="faq-item">
-
-                    <button class="faq-question" type="button">
-
-                        <span class="faq-index">05</span>
-
-                        <span class="faq-question-text">
-                            Combien coûte une automatisation ?
-                        </span>
-
-                        <span class="faq-plus">+</span>
-
-                    </button>
-
-                    <div class="faq-answer">
-                        <p>
-                            Le coût dépend de la complexité du projet,
-                            du nombre de processus concernés et des outils
-                            nécessaires. Un devis peut être établi après
-                            analyse de votre besoin.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                <article class="faq-item">
-
-                    <button class="faq-question" type="button">
-
-                        <span class="faq-index">06</span>
-
-                        <span class="faq-question-text">
-                            Comment commencer ?
-                        </span>
-
-                        <span class="faq-plus">+</span>
-
-                    </button>
-
-                    <div class="faq-answer">
-                        <p>
-                            Il suffit de nous expliquer votre fonctionnement
-                            actuel et les tâches qui vous prennent du temps.
-                            Nous pourrons ensuite identifier les possibilités
-                            d'automatisation.
-                        </p>
-                    </div>
-
-                </article>
-
-
-            </div>
-
-            <div class="faq-no-result" id="faqNoResult">
-                Aucune question ne correspond à votre recherche.
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CTA -->
-
-    <section class="faq-cta-section">
-
-        <div class="container">
-
-            <div class="faq-cta">
-
-                <div class="cta-bubble">
-                    <span>•••</span>
                 </div>
 
-                <div class="cta-content">
+            </div>
 
-                    <span>ENCORE UNE QUESTION ?</span>
+        </section>
+
+
+        <!-- =====================================================
+             CATÉGORIES
+        ====================================================== -->
+
+        <section class="section faq-categories">
+
+            <div class="container">
+
+                <div class="section-heading faq-section-heading">
+
+                    <div class="badge">
+                        PAR CATÉGORIE
+                    </div>
 
                     <h2>
-                        Notre équipe est là pour vous aider.
+                        Trouvez rapidement
+                        <span>l'information.</span>
                     </h2>
 
                     <p>
-                        Échangeons ensemble sur votre projet et trouvons
-                        les solutions adaptées à vos besoins.
+                        Parcourez les différentes catégories
+                        pour trouver la réponse à votre question.
                     </p>
 
                 </div>
 
-                <a href="devis.html" class="faq-cta-button">
-                    Demander un devis
-                    <span>→</span>
-                </a>
+
+                <div class="faq-category-grid">
+
+                    <a
+                        href="#faq-questions"
+                        class="faq-category"
+                    >
+                        <div class="faq-category-icon">
+                            💡
+                        </div>
+
+                        <h3>
+                            Généralités
+                        </h3>
+
+                        <p>
+                            Comprendre l'automatisation et son fonctionnement.
+                        </p>
+
+                        <span>
+                            Voir les réponses →
+                        </span>
+                    </a>
+
+
+                    <a
+                        href="#faq-questions"
+                        class="faq-category"
+                    >
+                        <div class="faq-category-icon">
+                            ⚙️
+                        </div>
+
+                        <h3>
+                            Fonctionnalités
+                        </h3>
+
+                        <p>
+                            Découvrez ce que nous pouvons automatiser.
+                        </p>
+
+                        <span>
+                            Voir les réponses →
+                        </span>
+                    </a>
+
+
+                    <a
+                        href="#faq-questions"
+                        class="faq-category"
+                    >
+                        <div class="faq-category-icon">
+                            🏢
+                        </div>
+
+                        <h3>
+                            Pour votre entreprise
+                        </h3>
+
+                        <p>
+                            L'automatisation adaptée aux petites entreprises.
+                        </p>
+
+                        <span>
+                            Voir les réponses →
+                        </span>
+                    </a>
+
+
+                    <a
+                        href="#faq-questions"
+                        class="faq-category"
+                    >
+                        <div class="faq-category-icon">
+                            🔗
+                        </div>
+
+                        <h3>
+                            Intégrations
+                        </h3>
+
+                        <p>
+                            Travaillez avec vos outils actuels.
+                        </p>
+
+                        <span>
+                            Voir les réponses →
+                        </span>
+                    </a>
+
+
+                    <a
+                        href="#faq-questions"
+                        class="faq-category"
+                    >
+                        <div class="faq-category-icon">
+                            📈
+                        </div>
+
+                        <h3>
+                            Tarifs &amp; ROI
+                        </h3>
+
+                        <p>
+                            Comprendre le coût et les bénéfices.
+                        </p>
+
+                        <span>
+                            Voir les réponses →
+                        </span>
+                    </a>
+
+
+                    <a
+                        href="#faq-questions"
+                        class="faq-category"
+                    >
+                        <div class="faq-category-icon">
+                            🚀
+                        </div>
+
+                        <h3>
+                            Démarrage
+                        </h3>
+
+                        <p>
+                            Comment commencer votre projet d'automatisation.
+                        </p>
+
+                        <span>
+                            Voir les réponses →
+                        </span>
+                    </a>
+
+                </div>
 
             </div>
 
-        </div>
-
-    </section>
-
-</main>
+        </section>
 
 
-<!-- FOOTER -->
+        <!-- =====================================================
+             QUESTIONS
+        ====================================================== -->
 
-<footer class="site-footer">
+        <section
+            class="section faq-questions-section"
+            id="faq-questions"
+        >
 
-    <div class="container">
+            <div class="container">
 
-        <div class="footer-grid">
+                <div class="section-heading faq-section-heading">
 
-            <div>
+                    <div class="badge">
+                        FAQ
+                    </div>
 
-                <div class="footer-title">
-                    AutoPilot Solutions
+                    <h2>
+                        Les réponses à vos
+                        <span>questions.</span>
+                    </h2>
+
+                    <p>
+                        Si vous ne trouvez pas ce que vous cherchez,
+                        contactez-nous directement.
+                    </p>
+
                 </div>
+
+
+                <div class="faq-list" id="faqList">
+
+
+                    <!-- QUESTION 1 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span class="faq-index">
+                                01
+                            </span>
+
+                            <span class="faq-question-text">
+                                Qu'est-ce que l'automatisation ?
+                            </span>
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                L'automatisation consiste à faire exécuter
+                                automatiquement certaines tâches répétitives
+                                par des outils numériques. Par exemple,
+                                lorsqu'un prospect remplit un formulaire,
+                                ses informations peuvent être enregistrées,
+                                un email de confirmation peut être envoyé
+                                et une notification peut être transmise
+                                automatiquement à votre équipe.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUESTION 2 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span class="faq-index">
+                                02
+                            </span>
+
+                            <span class="faq-question-text">
+                                Quelles tâches peut-on automatiser ?
+                            </span>
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                De nombreuses tâches peuvent être automatisées :
+                                gestion des prospects, emails, relances,
+                                prise de rendez-vous, notifications,
+                                collecte de données, suivi client,
+                                création de documents ou encore certaines
+                                tâches administratives. Nous analysons
+                                votre fonctionnement pour identifier
+                                les tâches qui peuvent réellement vous
+                                faire gagner du temps.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUESTION 3 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span class="faq-index">
+                                03
+                            </span>
+
+                            <span class="faq-question-text">
+                                Est-ce adapté aux petites entreprises ?
+                            </span>
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Oui. L'automatisation peut être particulièrement
+                                intéressante pour les indépendants, artisans,
+                                TPE et PME qui souhaitent gagner du temps
+                                sans avoir besoin de recruter ou de modifier
+                                complètement leur organisation.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUESTION 4 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span class="faq-index">
+                                04
+                            </span>
+
+                            <span class="faq-question-text">
+                                Est-ce que vous travaillez avec mes outils actuels ?
+                            </span>
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Dans la majorité des projets, nous cherchons
+                                à travailler avec les outils que vous utilisez
+                                déjà. L'objectif n'est pas de tout remplacer,
+                                mais de connecter et optimiser votre
+                                fonctionnement lorsque cela est possible.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUESTION 5 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span class="faq-index">
+                                05
+                            </span>
+
+                            <span class="faq-question-text">
+                                Dois-je être expert en informatique ?
+                            </span>
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Non. Vous n'avez pas besoin de connaissances
+                                techniques particulières. Nous nous occupons
+                                de la partie technique et nous vous expliquons
+                                simplement le fonctionnement de votre
+                                automatisation.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUESTION 6 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span class="faq-index">
+                                06
+                            </span>
+
+                            <span class="faq-question-text">
+                                Peut-on automatiser un processus spécifique à mon entreprise ?
+                            </span>
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Oui. Chaque entreprise possède son propre
+                                fonctionnement. Nous pouvons étudier un
+                                processus spécifique à votre activité et
+                                déterminer comment l'automatiser, le simplifier
+                                ou améliorer son suivi.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUESTION 7 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span class="faq-index">
+                                07
+                            </span>
+
+                            <span class="faq-question-text">
+                                Combien coûte une automatisation ?
+                            </span>
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Le prix dépend du processus à automatiser,
+                                du nombre d'outils à connecter et du niveau
+                                de personnalisation nécessaire. Chaque projet
+                                étant différent, nous établissons un devis
+                                adapté à votre besoin après avoir analysé
+                                votre situation.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUESTION 8 -->
+
+                    <div class="faq-item">
+
+                        <button
+                            class="faq-question"
+                            type="button"
+                            aria-expanded="false"
+                        >
+
+                            <span class="faq-index">
+                                08
+                            </span>
+
+                            <span class="faq-question-text">
+                                Comment commencer ?
+                            </span>
+
+                            <span class="faq-plus">
+                                +
+                            </span>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Il suffit de nous présenter votre activité
+                                et les tâches qui vous prennent du temps.
+                                Nous analysons votre besoin, identifions
+                                les possibilités d'automatisation et vous
+                                proposons une solution adaptée.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <div
+                    class="faq-no-result"
+                    id="faqNoResult"
+                    style="display: none;"
+                >
+                    Aucune question ne correspond à votre recherche.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CTA QUESTIONS
+        ====================================================== -->
+
+        <section class="section faq-cta">
+
+            <div class="container">
+
+                <div class="cta-box">
+
+                    <div>
+
+                        <div class="badge">
+                            BESOIN D'AIDE ?
+                        </div>
+
+                        <h2>
+                            Encore une question ?
+                        </h2>
+
+                        <p>
+                            Notre équipe est là pour vous aider à comprendre
+                            ce qui peut être automatisé dans votre entreprise.
+                        </p>
+
+                    </div>
+
+
+                    <div class="faq-cta-actions">
+
+                        <a
+                            href="devis.html"
+                            class="btn faq-cta-button"
+                        >
+                            Demander un devis
+                        </a>
+
+                        <a
+                            href="tel:+33788797245"
+                            class="faq-cta-phone"
+                        >
+                            📞 07 88 79 72 45
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CAS CONCRETS
+        ====================================================== -->
+
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section-heading faq-section-heading">
+
+                    <div class="badge">
+                        CONCRÈTEMENT
+                    </div>
+
+                    <h2>
+                        Une automatisation,
+                        <span>ça ressemble à ça.</span>
+                    </h2>
+
+                    <p>
+                        Voici quelques exemples de processus que nous
+                        pouvons simplifier.
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            👤
+                        </div>
+
+                        <h3>
+                            Nouveau prospect
+                        </h3>
+
+                        <p>
+                            Un prospect remplit votre formulaire.
+                            Ses informations sont enregistrées,
+                            un email de confirmation est envoyé,
+                            votre équipe est prévenue et une relance
+                            peut être programmée automatiquement.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            📅
+                        </div>
+
+                        <h3>
+                            Prise de rendez-vous
+                        </h3>
+
+                        <p>
+                            Un client prend rendez-vous en ligne.
+                            Le rendez-vous est ajouté à votre agenda,
+                            une confirmation est envoyée et des rappels
+                            peuvent être déclenchés automatiquement.
+                        </p>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <div class="service-icon">
+                            🔔
+                        </div>
+
+                        <h3>
+                            Relance client
+                        </h3>
+
+                        <p>
+                            Une demande reste sans réponse.
+                            Une relance peut être envoyée automatiquement
+                            au bon moment afin de ne plus laisser passer
+                            certaines opportunités.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FINAL CTA
+        ====================================================== -->
+
+        <section class="section faq-final-cta">
+
+            <div class="container">
+
+                <div class="faq-final-content">
+
+                    <div class="badge">
+                        AUTOPILOT SOLUTIONS
+                    </div>
+
+                    <h2>
+                        Vous avez une tâche qui
+                        <span>vous fait perdre du temps ?</span>
+                    </h2>
+
+                    <p>
+                        Expliquez-nous votre fonctionnement.
+                        Nous analysons votre besoin et identifions
+                        les possibilités pour simplifier ou automatiser
+                        vos tâches répétitives.
+                    </p>
+
+                    <div class="faq-final-actions">
+
+                        <a
+                            href="devis.html"
+                            class="btn"
+                        >
+                            Demander mon devis
+                        </a>
+
+                        <a
+                            href="tel:+33788797245"
+                            class="btn btn-secondary"
+                        >
+                            📞 Être rappelé
+                        </a>
+
+                    </div>
+
+                    <p class="faq-final-note">
+                        Vous ne savez pas encore quoi automatiser ?
+                        Aucun problème. Nous pouvons analyser votre
+                        fonctionnement avec vous.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <div class="footer-brand">
+
+                    <a
+                        href="../index.html"
+                        class="logo"
+                    >
+                        <img
+                            src="../images/logo.png"
+                            alt="AutoPilot Solutions"
+                        >
+                    </a>
+
+                    <p>
+                        Des solutions d'automatisation simples,
+                        adaptées à votre entreprise.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-col">
+
+                    <h3 class="footer-title">
+                        Navigation
+                    </h3>
+
+                    <a href="../index.html">
+                        Accueil
+                    </a>
+
+                    <a href="pour-qui.html">
+                        Pour qui ?
+                    </a>
+
+                    <a href="services.html">
+                        Services
+                    </a>
+
+                    <a href="pourquoi-nous.html">
+                        Pourquoi nous ?
+                    </a>
+
+                    <a href="comment-ca-marche.html">
+                        Comment ça marche ?
+                    </a>
+
+                    <a href="tarifs.html">
+                        Tarifs
+                    </a>
+
+                    <a href="faq.html">
+                        FAQ
+                    </a>
+
+                </div>
+
+
+                <div class="footer-col">
+
+                    <h3 class="footer-title">
+                        Contact
+                    </h3>
+
+                    <a href="tel:+33788797245">
+                        07 88 79 72 45
+                    </a>
+
+                    <a href="mailto:contact.autopilotsolutions@gmail.com">
+                        contact.autopilotsolutions@gmail.com
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/nicolas-alepee-26319042/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+                    </a>
+
+                </div>
+
+
+                <div class="footer-col">
+
+                    <h3 class="footer-title">
+                        Démarrer
+                    </h3>
+
+                    <p>
+                        Vous souhaitez automatiser certaines
+                        tâches de votre entreprise ?
+                    </p>
+
+                    <a
+                        href="devis.html"
+                        class="btn"
+                    >
+                        Demander un devis
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
 
                 <p>
-                    Automatisation et optimisation des processus
-                    pour les entreprises.
+                    ©
+                    <span id="currentYear"></span>
+                    AutoPilot Solutions. Tous droits réservés.
                 </p>
 
-            </div>
+                <div class="footer-legal">
 
+                    <a href="mentions-legales.html">
+                        Mentions légales
+                    </a>
 
-            <div class="footer-col">
+                    <a href="politique-confidentialite.html">
+                        Politique de confidentialité
+                    </a>
 
-                <div class="footer-title">
-                    Navigation
                 </div>
-
-                <a href="../index.html">Accueil</a>
-                <a href="pour-qui.html">Pour qui ?</a>
-                <a href="services.html">Services</a>
-                <a href="tarifs.html">Tarifs</a>
-
-            </div>
-
-
-            <div class="footer-col">
-
-                <div class="footer-title">
-                    Entreprise
-                </div>
-
-                <a href="pourquoi-nous.html">Pourquoi nous ?</a>
-                <a href="comment-ca-marche.html">
-                    Comment ça marche
-                </a>
-                <a href="faq.html">FAQ</a>
-
-            </div>
-
-
-            <div class="footer-col">
-
-                <div class="footer-title">
-                    Contact
-                </div>
-
-                <a href="devis.html">
-                    Demander un devis
-                </a>
-
-                <a href="tel:TON_NUMERO">
-                    📞 TON_NUMERO
-                </a>
-
-                <a href="mailto:TON_EMAIL">
-                    ✉️ TON_EMAIL
-                </a>
 
             </div>
 
         </div>
 
-
-        <div class="footer-bottom">
-
-            <span>
-                © <span data-current-year>2026</span>
-                AutoPilot Solutions.
-                Tous droits réservés.
-            </span>
-
-            <span>
-
-                <a href="mentions-legales.html">
-                    Mentions légales
-                </a>
-
-                ·
-
-                <a href="politique-confidentialite.html">
-                    Confidentialité
-                </a>
-
-            </span>
-
-        </div>
-
-    </div>
-
-</footer>
+    </footer>
 
 
-<script src="../js/script.js"></script>
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
-<script>
+    <script>
 
-/* FAQ ACCORDÉON */
+        document.addEventListener("DOMContentLoaded", function () {
 
-document.querySelectorAll(".faq-question").forEach(button => {
+            /* =================================================
+               MENU MOBILE
+            ================================================= */
 
-    button.addEventListener("click", () => {
+            const menuToggle =
+                document.getElementById("menuToggle");
 
-        const item = button.closest(".faq-item");
+            const mainNav =
+                document.getElementById("mainNav");
 
-        document.querySelectorAll(".faq-item").forEach(otherItem => {
 
-            if (otherItem !== item) {
-                otherItem.classList.remove("open");
+            if (menuToggle && mainNav) {
+
+                menuToggle.addEventListener("click", function () {
+
+                    const isOpen =
+                        mainNav.classList.toggle("open");
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        isOpen ? "true" : "false"
+                    );
+
+                    menuToggle.setAttribute(
+                        "aria-label",
+                        isOpen
+                            ? "Fermer le menu"
+                            : "Ouvrir le menu"
+                    );
+
+                });
+
+
+                mainNav
+                    .querySelectorAll("a")
+                    .forEach(function (link) {
+
+                        link.addEventListener(
+                            "click",
+                            function () {
+
+                                mainNav.classList.remove("open");
+
+                                menuToggle.setAttribute(
+                                    "aria-expanded",
+                                    "false"
+                                );
+
+                                menuToggle.setAttribute(
+                                    "aria-label",
+                                    "Ouvrir le menu"
+                                );
+
+                            }
+                        );
+
+                    });
+
+            }
+
+
+            /* =================================================
+               FAQ ACCORDION
+            ================================================= */
+
+            const faqItems =
+                document.querySelectorAll(".faq-item");
+
+
+            faqItems.forEach(function (item) {
+
+                const question =
+                    item.querySelector(".faq-question");
+
+
+                if (!question) {
+                    return;
+                }
+
+
+                question.addEventListener(
+                    "click",
+                    function () {
+
+                        const isOpen =
+                            item.classList.contains("open");
+
+
+                        faqItems.forEach(function (otherItem) {
+
+                            otherItem.classList.remove("open");
+
+                            const otherQuestion =
+                                otherItem.querySelector(
+                                    ".faq-question"
+                                );
+
+
+                            if (otherQuestion) {
+
+                                otherQuestion.setAttribute(
+                                    "aria-expanded",
+                                    "false"
+                                );
+
+                            }
+
+                        });
+
+
+                        if (!isOpen) {
+
+                            item.classList.add("open");
+
+                            question.setAttribute(
+                                "aria-expanded",
+                                "true"
+                            );
+
+                        }
+
+                    }
+                );
+
+            });
+
+
+            /* =================================================
+               RECHERCHE FAQ
+            ================================================= */
+
+            const faqSearch =
+                document.getElementById("faqSearch");
+
+            const faqNoResult =
+                document.getElementById("faqNoResult");
+
+
+            if (faqSearch) {
+
+                faqSearch.addEventListener(
+                    "input",
+                    function () {
+
+                        const search =
+                            faqSearch.value
+                                .toLowerCase()
+                                .trim();
+
+
+                        let visibleCount = 0;
+
+
+                        faqItems.forEach(function (item) {
+
+                            const text =
+                                item.textContent
+                                    .toLowerCase();
+
+
+                            const matches =
+                                text.includes(search);
+
+
+                            if (matches) {
+
+                                item.style.display = "";
+                                visibleCount++;
+
+                            } else {
+
+                                item.style.display = "none";
+
+                            }
+
+                        });
+
+
+                        if (faqNoResult) {
+
+                            faqNoResult.style.display =
+                                visibleCount === 0
+                                    ? "block"
+                                    : "none";
+
+                        }
+
+                    }
+                );
+
+            }
+
+
+            /* =================================================
+               ANNÉE FOOTER
+            ================================================= */
+
+            const currentYear =
+                document.getElementById("currentYear");
+
+
+            if (currentYear) {
+
+                currentYear.textContent =
+                    new Date().getFullYear();
+
             }
 
         });
 
-        item.classList.toggle("open");
-
-    });
-
-});
-
-
-/* RECHERCHE FAQ */
-
-const searchInput = document.getElementById("faqSearch");
-const faqItems = document.querySelectorAll(".faq-item");
-const noResult = document.getElementById("faqNoResult");
-
-searchInput.addEventListener("input", () => {
-
-    const search = searchInput.value
-        .toLowerCase()
-        .trim();
-
-    let visible = 0;
-
-    faqItems.forEach(item => {
-
-        const text = item.innerText.toLowerCase();
-
-        if (text.includes(search)) {
-
-            item.style.display = "";
-            visible++;
-
-        } else {
-
-            item.style.display = "none";
-
-        }
-
-    });
-
-    noResult.style.display =
-        visible === 0 ? "block" : "none";
-
-});
-
-
-/* ANNÉE AUTOMATIQUE */
-
-document.querySelectorAll("[data-current-year]").forEach(element => {
-    element.textContent = new Date().getFullYear();
-});
-
-
-/* MENU MOBILE */
-
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-
-if (menuToggle && navLinks) {
-
-    menuToggle.addEventListener("click", () => {
-
-        navLinks.classList.toggle("open");
-
-        const isOpen =
-            navLinks.classList.contains("open");
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            isOpen
-        );
-
-    });
-
-}
-
-</script>
+    </script>
 
 </body>
 </html>
